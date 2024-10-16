@@ -1,0 +1,368 @@
+{% extends "layout.html" %} {% block title %}protocol{% endblock %} {% block lead %}{% endblock %} {% block page_content %}
+
+<div class="background-overlay"></div>
+<img class="X-background" src="https://static.igem.wiki/teams/5283/backgroundp/protocol.webp" alt="X-background">
+<div class="X">
+    <div class="X-title">
+        <span>Protocol</span>
+    </div>
+
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#one" id="nav-one">I.Bacterial Culturing and Protein Expression</a></li>
+            <li><a href="#two" id="nav-two">II. Project specific implementation plan</a></li>
+            <li><a href="#three" id="nav-three">III. Protein Function Validation</a></li>
+            <li><a href="#four" id="nav-four">IV. Cell Experiment Preparation</a></li>
+            <li><a href="#five" id="nav-five">V. Adipogenic Differentiation Induction</a></li>
+            <li><a href="#six" id="nav-six">VI. Experiment on FGF21 Improving Insulin Resistance</a></li>
+            <li><a href="#seven" id="nav-seven">VII. GLP-1 Secretion Experiment</a></li>
+        </ul>
+    </div>
+
+    <div class="X-content">
+        <div class="h" id="one">
+            <h1>I.Bacterial Culturing and Protein Expression</h1>
+            <h2>Induced Secretion of Escherichia coli</h2>
+            <h3>Objective:</h3>
+            <p>To induce the secretion of recombinant FGF21 protein by Escherichia coli using IPTG.</p>
+            <h3>Material Preparation:</h3>
+            <p>MSR Broth</p>
+            <p>Ampicillin (optional, depending on the strain's resistance)</p>
+            <p>IPTG powder or solution</p>
+            <p>E. coli expression strain</p>
+            <p>Sterile centrifuge tubes</p>
+            <p>Sterile 1.5 mL centrifuge tubes</p>
+            <p>Shaking incubator</p>
+            <p>Centrifuge</p>
+            <p>Temperature-controlled water bath or room temperature conditions</p>
+            <h3>Experimental Procedure:</h3>
+            <h4>1. Preparation of Culture Medium:</h4>
+            <p>Weigh yeast extract, peptone, and NaCl according to the formula of MSR medium and dissolve in distilled water.</p>
+            <p>Adjust the pH to 7.0.</p>
+            <p>If necessary, add an appropriate amount of Ampicillin (e.g., 100 µg/mL).</p>
+            <p>Dispense the medium into sterile Erlenmeyer flasks or test tubes, leaving space for shaking culture.</p>
+            <h4>2. Strain Revival:</h4>
+            <p>Retrieve the stored E. coli strain from the -80°C freezer.</p>
+            <p>Revive the strain in a 37°C water bath.</p>
+            <p>Under sterile conditions, inoculate the revived strain into MSR medium and incubate overnight in a shaking incubator at 37°C.</p>
+            <h4>3. Seed Culture:</h4>
+            <p>Take 100 µL of the overnight culture and add it to a 500 mL Erlenmeyer flask containing 100 mL of MSR medium.</p>
+            <p>Cultivate at 37°C and 200 rpm until the OD600 reaches 0.5-0.7 (approximately 3-4 hours).</p>
+            <h4>4. Preparation of Inducer:</h4>
+            <p>Prepare a 1 M stock solution of IPTG powder and dilute to the working concentration with an appropriate amount of distilled water before use.</p>
+            <h4>5. Induction of Expression:</h4>
+            <p>When the OD600 reaches 0.5-0.7, add IPTG to the medium to a final concentration of 0.1-1 mM.</p>
+            <p>Different IPTG concentrations and induction times can be set according to the experimental design.</p>
+            <h4>6. *nduction Cultivation:</h4>
+            <p>After induction, place the medium back into the shaking incubator at 37°C for continued cultivation.</p>
+            <p>The induction time can be several hours or overnight (approximately 16-24 hours).</p>
+            <h4>7. Cell Collection:</h4>
+            <p>After the induction is complete, remove the medium and centrifuge at 4°C at 8000 rpm for 5 minutes.</p>
+            <p>Collect the bacterial pellet, remove the supernatant, and the pellet can be used for subsequent protein extraction.</p>
+            <h3>Precautions:</h3>
+            <P>All operations should be performed under sterile conditions to avoid contamination by miscellaneous bacteria.</P>
+            <p>The working solution of IPTG should be freshly prepared and stored at -20°C.</p>
+            <p> The induction time and IPTG concentration need to be optimized according to the target protein.</p>
+            <p>The induction temperature may affect protein expression and folding; lower temperatures (e.g., 16°C) generally help to improve solubility and reduce the formation of inclusion bodies.</p>
+        </div>
+
+        <div class="h" id="two">
+            <h1>II. Protein Extraction and Purification</h1>
+            <h2>Purification of P9 Protein</h2>
+            <h3>Outer Membrane Protein Extraction</h3>
+            <p>Centrifuged culture broth (3 mL) at 3,500g for 5 min at 4°C.</p>
+            <p>Wash the cell pellet with 1 mL of 10 mM Na₂HPO₄ buffer (pH 7.2), centrifuge at 3,500g for 5 min at 4°C, and resuspend in 0.5 mL of 10 mM Na₂HPO₄ buffer (pH 7.2).</p>
+            <p>Prepare crude extracts of recombinant E. coli cells by three cycles of sonication (each for 20 s at 15% of maximum output).</p>
+            <p>Remove partially disrupted cells by centrifugation of sonicated samples at 12,000g for 2 min at room temperature.</p>
+            <p>Isolate membrane proteins and the lipid layer by centrifugation at 12,000g for 30 min at 4°C, followed by resuspension in 0.5 mL of 10 mM Na₂HPO₄ buffer (pH 7.2) containing 0.5% (wt/vol) sarcosyl.</p>
+            <p>After incubation at 37°C for 30 min, obtain an insoluble pellet containing membrane proteins by centrifugation at 12,000g for 30 min at 4°C.</p>
+            <p>Obtain membrane proteins were by washing the insoluble pellet with 10 mM Na₂HPO₄ buffer (pH 7.2) followed by resuspending in 50 μL of TE buffer (pH 8.0).</p>
+            <h3>Purification</h3>
+            <p>Prepare the sample and resin following the instruction of the manual of the MonoRab™ Anti-DYKDDDDK Affinity Resin (GenScript).</p>
+            <p>Load the prepared sample onto the column under gravity flow at room temperature. Attach a buffer reservoir to the top of the column for loading large volume. Collect and reload flowthrough several times for maximal binding. Lower flow rate
+                may facilitate better target protein binding.</p>
+            <p>Wash the column with 10 - 20 bed volumes of TBS to reduce non-specific bindings. Allow the column to drain completely and proceed to elution procedure.</p>
+            <p>Load 2-3 bed volumes of competitive elution buffer into the column by gravity flow; when there is about 1 bed volume of elution buffer left on top of the resin, cap the bottom of column and incubate at room temperature for 30-60 minutes; open
+                the end of the column and collect the eluate.</p>
+            <h2>Purification and Isolation of FGF21</h2>
+            <h3>Material Preparation:</h3>
+            <h4>Buffer Solutions:</h4>
+            <p>Lysis Buffer: 50 mM Tris-HCl, pH 8.0, 300 mM NaCl, 10 mM imidazole, 1 mM PMSF.</p>
+            <p>Wash Buffer: 50 mM Tris-HCl, pH 8.0, 300 mM NaCl, 20 mM imidazole.</p>
+            <p>Elution Buffer: 50 mM Tris-HCl, pH 8.0, 300 mM NaCl, 250 mM imidazole.</p>
+            <h4>Instrumentation:</h4>
+            <p>Ultrasonic Homogenizer (equipped with a cold water bath)</p>
+            <p>Centrifuge (with cooling function)</p>
+            <p>Affinity Chromatography Column (e.g., His-tag purification column)</p>
+            <p>Chromatography System (such as AKTA purification system)</p>
+            <p>SDS-PAGE Equipment</p>
+            <p>Protein Concentration Measurement Tools (e.g., Bradford protein assay kit)</p>
+            <p>Aliquot Tubes and -80°C Freezer</p>
+            <h3>Procedure:</h3>
+            <h4>Cell Lysis:</h4>
+            <p>Resuspend the collected bacterial pellet in lysis buffer on ice, with a ratio of bacteria to buffer of 1:5 (volume ratio).</p>
+            <p>Use an ultrasonic homogenizer for cell disruption, set parameters to: power 400W, disrupt for 3 seconds, interval 6 seconds, total time 30 minutes.</p>
+            <p>Keep the sample in an ice bath during the disruption process to prevent protein denaturation.</p>
+            <h4>Collection of Cell Lysate:</h4>
+            <p>Centrifuge the disrupted cell suspension at 4°C at 10,000 rpm for 5-10 minutes.</p>
+            <p>Collect the supernatant, discarding the precipitated cell debris.</p>
+            <h4>Protein Purification:</h4>
+            <p>At 4°C, slowly pass the supernatant through a pre-equilibrated His-tag affinity chromatography column.</p>
+            <p>Wash the column with wash buffer until the OD280 approaches baseline.</p>
+            <p>Perform gradient elution with elution buffer and collect the eluate containing FGF21.</p>
+            <h4>SDS-PAGE Analysis:</h4>
+            <p>Take an appropriate amount of eluate for SDS-PAGE analysis.</p>
+            <p>Observe the expression and purification effect of the protein through the electrophoretic bands.</p>
+            <h4>Post-Purification Processing:</h4>
+            <p>Protein Concentration Determination: Use the Bradford method or other protein concentration measurement methods to determine the protein concentration.</p>
+            <p>Protein Storage: Aliquot the purified FGF21 into multiple small portions to avoid repeated freeze-thaw cycles and store at -80°C.</p>
+            <h3>Precautions:</h3>
+            <p>Sterile Operation: Maintain sterile operations throughout the process to prevent bacterial contamination.</p>
+            <p>Optimization of Induction Conditions: The induction time and temperature need to be optimized according to experimental conditions to achieve the best protein expression.</p>
+            <p>Buffer Selection: Pay attention to the selection of buffers during purification to ensure the activity and stability of the protein.</p>
+            <p>Protein Stability: Try to keep the protein at low temperatures during the operation to maintain its biological activity.</p>
+            <p>Chromatography Conditions: Depending on the physicochemical properties of the FGF21 protein, parameters such as the flow rate of the chromatography column and the concentration of the elution buffer may need to be adjusted to optimize the
+                purification effect.</p>
+            <p>Protein Concentration Measurement: When measuring protein concentration, ensure that the sample dilution is within the linear range of the Bradford method.</p>
+            <p>Long-Term Storage: For long-term storage, it is recommended to use 50% glycerol as a protective agent to prevent protein denaturation during freezing.</p>
+            <h2>Determination of protein concentration:</h2>
+            <p>Using the BCA protein quantitative determination kit to measure protein concentration, according to the kit manual operation. Steps are as follows:</p>
+            <h3>A. Reagent preparation</h3>
+            <p>1. Calculate the required volume of BCA working solution based on the formula provided. BCA working solution volume=(standard curve measurement points+sample number)×repetitions×BCA solution required for each sampleBCA working solution volume=(standard
+                curve measurement points+sample number)×repetitions×BCA solution required for each sample</p>
+            <p>2. Prepare the BCA working solution by mixing solution A and solution B in a 50:1 ratio.</p>
+            <p>3. Take an appropriate amount of BSA standard solution and dilute it to 500 μg/mL with 1x PBS (137 mM NaCl, 2.7 mM KCl, 8 mM Na2HPO4·2H2O, 1.5 mM KH2PO4, pH 7.4) solution.</p>
+            <p>4. Set up 16 1.5 mL centrifuge tubes, prepare 8 repeat tubes according to the following table for parallel operations.</p>
+            <p>5. Dilute the samples appropriately with 1x PBS and stand by.</p>
+            <h3>B. Spectrophotometry</h3>
+            <p>1. Take 20 1.5 mL centrifuge tubes and divide them into standard and sample groups. For each standard set up a repeat, add 100 μL of the corresponding standard protein solution to each tube; For the remaining four 1.5 mL centrifuge tubes,
+                divide into two repeating groups, with the same number of tubes for each repetition. Add 100 μL of sample diluent to the tubes with different concentrations.</p>
+            <p>2. Add 1 mL of BCA working solution to each tube and mix quickly.</p>
+            <p>3. Incubate at 37°C water bath for 30 minutes.</p>
+            <p>4. After cooling to room temperature, measure the A562 value of each tube using a spectrophotometer.</p>
+            <p>5. Plot the standard curve by taking the average A562 value of each tube in the standard group as the ordinate and the corresponding protein concentration as the abscissa, either on paper or in Microsoft Excel software.</p>
+            <p>6. Calculate the protein concentration of the sample after dilution according to the average value of two same sample dilution A562 on the standard curve. Choose appropriate dilution degrees of the sample to calculate the final protein concentration
+                of the sample, and calculate the protein concentration of the original sample by the dilution ratio.</p>
+            <h3>C. Enzyme-labeled plate method</h3>
+            <p>1. Select 20 wells on an enzyme label plate, divided into standard and sample groups. For every standard, set up 16 wells with a repeat, add 20 μL of the corresponding standard protein solution to each well; The remaining 4 wells are divided
+                into two repeating groups, with the same number of wells for each repetition. Add 20 μL of sample diluent to the wells with different concentrations.</p>
+            <p>2. Add 200 μL of BCA working solution to each enzyme marker well and mix quickly.</p>
+
+            <p>3. Keep warm in a 37°C water bath for 30 minutes.</p>
+            <p>4. After cooling to room temperature, measure the A562 value of each well using an enzyme standard instrument.</p>
+            <p>5. Draw a standard curve on graph paper or in Microsoft Excel software using the average A562 value of each well in the standard group as the ordinate and the corresponding protein concentration as the abscordinate.</p>
+            <p>6. Calculate the protein concentration of the sample after dilution according to the average value of two same sample dilution A562 on the standard curve. Choose appropriate dilution degrees of the sample to calculate the final protein concentration
+                of the sample, and calculate the protein concentration of the original sample by the dilution ratio.</p>
+            <p>Note: The optimal protein concentration is 3-5 μg/μL.</p>
+        </div>
+
+        <div class="h" id="three">
+            <h1>III. Protein Function Validation</h1>
+            <h2>FLAG Immunofluorescence Localization</h2>
+            <p>Harvest cells induced with 1 mM IPTG for 4 h by centrifugation for 5 min at 3,500 ×g and 4°C and then wash with phosphate-buffered saline (PBS).</p>
+            <p>Incubate the cells with the ANTI-FLAG M2 antibody conjugated with fluorescein isothiocyanate (FITC) (Sigma-Aldrich) diluted 1:500 in PBS containing 3% (wt/vol) BSA at 25°C for 2 h.</p>
+            <p>Prior to microscopic observation, wash the cells three times with PBS to remove unbound antibody probes.</p>
+            <p>Mount the cells on poly-L-lysine–coated microscopic slide glasses and examined by confocal microscopy (Carl Zeiss, Germany).</p>
+            <p>Photographs were taken with a Carl Zeiss LSM 410.</p>
+            <p>The samples were excited at 488 nm, and the images were filtered by a longpass 505-nm filter.</p>
+            <h2>Flow Cytometry Analysis</h2>
+            <p>Resuspend approximately quantity harvested cells in 300 μL PBS containing 1% bovine serum albumin (PBS-B) and 40 μL rabbit antiserum primary antibody.</p>
+            <p>Incubation at room temperature (RT) for 30 to 60 min, then centrifuge the bacteria at 7,000 ×g for 2 min at 4°C and wash five times with 500 μL PBS.</p>
+            <p>Subsequent incubate the cells with Secondary Antibody fluorescein isothiocyanate (FITC) diluted dilution in PBS-B for 30 to 60 min at room temperature.</p>
+            <p>After collecting the bacteria by centrifugation at 7,000 ×g for 2 min and washing with 500 μL PBS-B five times, staining was analyzed by flow cytometry using a Flow Cytometer , following the manufacturer’s instructions.</p>
+        </div>
+
+        <div class="h" id="four">
+            <h1> IV. Cell Experiment Preparation</h1>
+            <h2>Cell resuscitation </h2>
+            <p>1. After removing the cryopreservation tube from the -80°C refrigerator, it was quickly placed into a 37 °C thermostatic water bath.</p>
+            <p>2. After melting completely, disinfect the frozen tube with alcohol and put it into the ultra-clean table. The cell suspension from the cryopreserved tubes was aspirated with a pipette and added to 10 ml of PBS.</p>
+            <p>3. The samples were centrifuged at 350 g for 4 min, the supernatant was discarded, and a further 10 ml of PBS was added to resuspended and centrifuged.</p>
+            <p>4. The supernatant was discarded, resuspended in 1 ml of complete medium, inoculated into 10 ml Petri dishes, supplemented with 9 ml of complete medium, and the culture flask was shaken to evenly distribute the cells, and labeled well.</p>
+            <h2>Cell passage</h2>
+            <p>1. Cells were removed from the incubator and observed under a microscope, and passaged when the density was greater than 80%.</p>
+            <p>2. The cell supernatant was gently aspirated off, rinsed with 2 mL PBS, and the PBS was aspirated and discarded.</p>
+            <p>3. After adding 1 mL of 0.25% trypsin, gently shaking and covering all cells, the cells were placed in an incubator at 37 ° C for standing digestion for 1 min.</p>
+            <p>4. When ≥90% of the cells were shed under the microscope, digestion was terminated by adding 5 ml of complete medium, and the surface of the cell layer was blown to disperse into individual cells.</p>
+            <p>5. After transfer to a 15 ml centrifuge tube, the cells were centrifuged at 350 g for 4 min, the supernatant was discarded, and the cell precipitate was resuspended in 3 ml (1: 3 passage) of complete medium containing serum.</p>
+            <p>6. 1 ml of the cell suspension was seeded into a 10 ml Petri dish, supplemented with 9 ml of complete medium, and the culture flask was shaken to evenly distribute the cells, and labeled well.</p>
+            <p>7. After observing the cell density and state under a microscope, the cells were placed in an incubator.</p>
+            <h2>Cell cryopreservation</h2>
+            <p>1. The cell cryopreservation solution consisted of 55% basal medium + 40% FBS+5% DMSO.</p>
+            <p>2. For microscopic observation of cells, the density was required to be ≥90%.</p>
+            <p>3. The cell supernatant was gently aspirated off, rinsed with 2 mL PBS, and the PBS was aspirated and discarded.</p>
+            <p>4. After adding 1 mL of 0.25% trypsin, gently shaking and covering all cells, the cells were placed in an incubator at 37 ° C for standing digestion for 1 min.</p>
+            <p>5. When ≥90% of the cells were shed under the microscope, digestion was terminated by adding 5 ml of complete medium, and the surface of the cell layer was blown to disperse into individual cells.</p>
+            <p>6. After transfer to a 15 ml centrifuge tube, the cells were centrifuged at 350 g for 4 min, the supernatant was discarded, and the cell precipitate was resuspended in 3 ml of cryopreserved solution.</p>
+            <p>7. 1 ml of the cell suspension was added to the cryopreserved tube and marked with the corresponding information.</p>
+            <p>8. The gradient was stored at 4°C for 20 min→-20°C for 30 min→-80°C.</p>
+        </div>
+
+        <div class="h" id="five">
+            <h1>V. Adipogenic Differentiation Induction</h1>
+            <h2>Adipogenic induction of differentiation</h2>
+            <p>1. Gelatin coating: Add the gelatin coating solution to a six-well plate, cover the bottom of the well, cover the top lid, and place it in the incubator for 30 minutes. It was removed after 30 min, and excess gelatin-coated solution was aspirated
+                with a straw and rinsed three times with PBS.</p>
+            <p>2. When the fusion of 3T3-L1 reached 80 to 90%, digestion was performed with 0.25% trypsin.</p>
+            <p>3. The digested 3T3-L1 was counted, and based on the count, the cells were seeded in six-well plates at a cell density of 2-3x10^4^cells/cm^2^, and 2 mL of 3T3-L1 complete medium was added to each well.</p>
+            <p>4. The uniformly inoculated 3T3-L1 cells were cultured in an incubator at 37 °C with 5% CO~2~.</p>
+            <p>5. When the cell confluence reached 100%, the complete medium in the Wells was carefully aspirated, and 2 mL of 3T3-L1 adipogenic differentiation medium solution A complete medium was added to the six-well plate.</p>
+            <p>6. After 2 days of induction with solution A, the induction complete medium of six-well plates was aspirated, and 2 mL of 3T3-L1 adipogenic induction differentiation medium B solution complete medium was added to each well for maintenance
+                for 1 day.</p>
+            <p>7. After 3-5 times of alternating induction with medium A and B, enough lipid droplets were observed in the stem cells, and then the cells were cultured with medium B for another 3-6 days (changing the medium every 2 days) until the lipid
+                droplets became full enough, and the induction was terminated. The cells were stained and identified according to the experimental requirements.</p>
+            <h2>nduction of Insulin resistance of 3T3‐L1 adipocytes</h2>
+            <p>1. For the collection of media conditioned by RAW264.7 macrophages (RAW-CM), RAW264.7 macrophages were grown to 90% confluency in DMEM containing 10% FBS. </p>
+            <p>2. The cells were stimulated with 100 ng/mL lipopolysaccharide (LPS) for 3 h. </p>
+            <p>3. After stimulation, the cells were cultured in new serum-free DMEM for 24 h. </p>
+            <p>4. The media was collected, filtrated through a 0.22 μm filter, and used as RAW-CM.</p>
+            <p>5. Insulin resistance of 3T3-L1 adipocytes could be induced by incubation with RAW-CM for 24 h. </p>
+        </div>
+
+        <div class="h" id="six">
+            <h1>VI. Experiment on FGF21 Improving Insulin Resistance</h1>
+            <h2>Different conditions and culture time of FGF21</h2>
+            <p>1. To assess the insulin resistance improvement effects of FGF21， RAW‐CM containing vehicle, 200 μg/ml or 2000 μg/ml proteins were added into 3T3‐L1 adipocytes.</p>
+            <p>2. After treatment for 24 h, 1 nM insulin was added to activate the insulin‐induced PI3K/Akt/mTOR signaling pathway. </p>
+            <p>3. The insulin sensitivity was detected by the AKT (Ser473) phosphorylation, which was qualified using western blotting.</p>
+            <h2>Total Protein Extraction and Western Blot Validation of Pathway Protein Changes</h2>
+            <h3>Cell lysis</h3>
+            <p>Cells are washed with cold PBS and lysed with ice-cold RIPA lysis buffer. The volume of RIPA added is 1000 μL per 100 mg of tissue (approximately 200 μL for a 6-well plate). PMSF is added at a ratio of 1001:1 when used. The mixture should
+                be agitated until PMSF is no longer crystalline before mixing with the lysate.</p>
+            <h3>Protein collection</h3>
+            <p>The cell lysate is transferred to a 1.5 mL centrifuge tube and centrifuged at 4°C, 12000 RPM for 10 minutes. The supernatant, containing the total protein, is collected in a fresh 1.5 mL centrifuge tube, avoiding the pellet.</p>
+            <b>Determination of protein concentration</b>
+            <p>The BCA protein assay kit is used to determine protein concentration according to the kit manual.</p>
+            <h2>Western Blot (WB) analysis</h2>
+            <h3>SDS-PAGE electrophoresis</h3>
+            <p>Protein denaturation is performed by mixing the protein sample with loading buffer and heating at 100°C for 10 minutes. The denatured protein is then cooled and stored at room temperature before use.</p>
+            <h3>Gel preparation</h3>
+            <p>The gel apparatus is assembled and checked for leaks. The appropriate concentration of separating gel is chosen based on the size of the protein to be run.</p>
+            <h3>Electrophoresis</h3>
+            <p>The protein samples are loaded onto the SDS-PAGE gel, and electrophoresis is performed with the Concentrating Gel at 80V and Separating Gel at 100V.</p>
+            <h3>Transfer</h3>
+            <p>The gel is removed, and the transfer membrane device is assembled with a filter paper-glue-film-filter paper sandwich structure. Pre-cooled electrotransfer solution is added, and the transfer is performed at 220 mA, 4°C for 1 to 2 hours.</p>
+            <h3>Blocking</h3>
+            <p>The membrane is blocked with 5% skimmed milk powder for 1.5 hours at room temperature to minimize nonspecific binding.</p>
+            <h3>Antibody incubation</h3>
+            <p>The membrane is incubated with the primary (target) antibody overnight at 4°C, followed by three washes with TBST (TBS buffer containing 0.1% Tween-20) for 8 to 10 minutes each.</p>
+            <h3>Development</h3>
+            <p>After discarding the secondary antibody solution and washing the membrane three times with TBST for 10 minutes each, the membrane is placed in chemiluminescence imaging and mixed with the ECL luminescent fluid. The instrument is then operated
+                for luminescence development.</p>
+            <h2>Glucose uptake measurement:</h2>
+            <h3>Cell culture and treatment</h3>
+            <p>Cells are seeded in DMEM medium supplemented with 10% fetal bovine serum (FBS) and maintained at 37°C in a 5% CO2 environment.</p>
+            <p>When the cell reaches a proper convergence degree (70-80%), it is processed for the experiment.</p>
+            <h3>Cell starvation treatment</h3>
+            <p>Cells are starved for 12-24 hours prior to the experiment by changing to serum-free or low-serum medium such as 0.5% FBS to reduce basal glucose uptake.</p>
+            <h3>Determination of glucose uptake</h3>
+            <p>Prepare no glucose medium and containing 2-deoxy-D-glucose (2-DG) without glucose medium (such as 2-DG concentration of 1 mM).</p>
+            <p>Cells are gently washed twice with preheated PBS to remove glucose from the residual medium.</p>
+            <p>Add an appropriate amount of glucose-free medium containing 2-DG to each well (such as 0.5 mL per well).</p>
+            <p>Incubate the cells at 37°C for the indicated time (e.g., 30 minutes).</p>
+            <h3>To terminate the reaction</h3>
+            <p>Cells are quickly washed twice with ice-cold PBS to terminate the glucose uptake reaction.</p>
+            <p>To each well, add 0.5 mL of cold acid ethanol (75% ethanol + 1N HCl), and incubate on ice for 10 minutes.</p>
+            <h3>Cell lysis</h3>
+            <p>Transfer the cell lysate solution to a 1.5 mL centrifuge tube and centrifuge at 4°C under 13000 RPM for 10 minutes.</p>
+            <p>Collect the supernatants for subsequent analysis.</p>
+            <h3>2-DG assay</h3>
+            <p>According to the determination of 2-DG kit instructions (e.g., radionuclide method, colorimetric or fluorescence).</p>
+            <p>Record the absorbance or fluorescence value, and according to the standard curve to calculate the glucose intake.</p>
+            <h3>Data analysis</h3>
+            <p>Standard curve: According to the standard drawing standard curve of 2-DG to determine the concentration of 2-DG in the samples.</p>
+            <p>To calculate glucose intake: The glucose intake for each sample was calculated from a standard curve and is usually expressed in pmol/mg protein or other units.</p>
+        </div>
+
+        <div class="h" id="seven">
+            <h1>VII. GLP-1 Secretion Experiment</h1>
+            <h2>NCI-H716 Cell Culture and Co-culture</h2>
+            <h3>Cell Preparation</h3>
+            <p>1. Culture the NCI-H716 cell line in RPMI 1640 medium supplemented with 10% Fetal Bovine Serum (FBS) and 1% Penicillin-Streptomycin (P/S) to maintain cell growth and health. (For cell culture in 96-well plates, the volume of medium added per
+                well is typically between 100 to 200 microliters (μl)).</p>
+            <p>2. Seed the cells in collagen-coated 96-well plates at a density of 3 × 10^5 cells/ml and incubate overnight at 37 °C, 5% CO2 to ensure cell adhesion.</p>
+            <h3>Starvation Treatment</h3>
+            <p>1. On the day before the experiment, remove the cell culture medium and gently wash the cells with Phosphate-Buffered Saline (PBS) to remove residual medium.</p>
+            <p>2. Add Hank's Balanced Salt Solution (HBSS) containing 0.2% Bovine Serum Albumin (BSA) to simulate the fasting state in vivo. This step is to clear serum components that may affect the experimental results, allowing the cells to be in a more
+                basic physiological state.</p>
+            <p>3. Incubate the cells in HBSS for 2 hours to ensure they are in a starved state.
+            </p>
+            <h3>Stimulation</h3>
+            <p>1. Prepare the protein P9 from A. muciniphila as the stimulant at a concentration of 50 μg/ml.</p>
+            <p>2. Aspirate the HBSS and gently wash the cells once with PBS.</p>
+            <p>3. Add the stimulant containing 50 μg/ml P9 protein to the cells and incubate for 1 hour at 37 °C, 5% CO2.</p>
+            <h3>Collection of Supernatant</h3>
+            <p>After the stimulation treatment, carefully collect the culture supernatant from each well using a sterile pipette and transfer it to a new sterile tube for subsequent GLP-1 concentration determination.</p>
+            <h2>GLP-1 Concentration Assay:GLP-1 ELISA Kit (Product Number: CSB-E08119h) for Measuring GLP-1 Concentration in Supernatant</h2>
+            <h3>Storage Conditions and Expiry Date</h3>
+            <p>1. Storage of Reagent Kits: Unopened reagent kits should be stored away from light at 2-8°C with a validity period of six months. Please use the reagent kit within the marked expiry date.</p>
+            <p>2. Storage of Enzyme-linked Plates: After opening, plates should be placed in an aluminum foil bag with desiccant and sealed to keep moisture away at 2-8°C, and can be stored for up to one month.</p>
+            <h3>Required Reagents and Equipment</h3>
+            <p>Standard specification microplate reader</p>
+            <p>High-speed centrifuge</p>
+            <p>Electric constant temperature incubator</p>
+            <p>Clean test tubes and centrifuge tubes</p>
+            <p>Volumetric flasks</p>
+            <p>Series of adjustable pipettes and tips</p>
+            <p>Multi-channel pipette</p>
+            <p>Distilled water</p>
+            <h3>Sample Collection and Preservation</h3>
+            <h4>Serum</h4>
+            <p>Whole blood specimens should be placed at room temperature for 2 hours or overnight at 4°C, then centrifuged at 1000g for 15 minutes, and the supernatant can be used for immediate testing;</p>
+            <p>Or aliquot the specimens and store at -20°C or -80°C, avoiding repeated freeze-thaw cycles;</p>
+            <p>After thawing, the samples should be centrifuged again before testing.</p>
+            <h4>Plasma</h4>
+            <p>EDTA or heparin can be used as anticoagulants, specimens should be centrifuged at 2-8°C 1000g for 15 minutes within 30 minutes after collection, and the supernatant can be used for immediate testing;</p>
+            <p>Or aliquot the specimens and store at -20°C or -80°C, avoiding repeated freeze-thaw cycles;</p>
+            <p>After thawing, the samples should be centrifuged again before testing.</p>
+            <h4>Tissue Lysis Fluid</h4>
+            <p>Take 100mg of tissue, wash away blood stains with 1X PBS, cut into small pieces and place into a tissue grinder (homogenization tube), add 1 ml of 1X PBS to make a homogenate;</p>
+            <p>Place at -20°C overnight, after two freeze-thaw cycles to disrupt cell membranes, centrifuge the tissue homogenate at 2-8°C 5000g for 5 minutes to collect the supernatant;</p>
+            <p>Take an appropriate amount of supernatant for immediate experimentation, or aliquot and store at -20°C or -80°C;</p>
+            <p>After thawing, the samples should be centrifuged again before testing;</p>
+            <p>Avoid repeated freeze-thaw cycles.</p>
+            <p>Note: Hemolysis of specimens can affect the final test results, therefore hemolyzed specimens should not be used for this test.</p>
+            <h3>Reagent Preparation</h3>
+            <p>Working Solution of Wash Liquid:Dilute concentrated wash liquid by 1:20 with deionized water. For example, measure 285ml of deionized water into a volumetric flask or other clean container, then measure 15ml of concentrated wash liquid and
+                add it evenly, stirring to mix well, prepare just before use. Concentrated wash liquid may precipitate salts when stored at low temperatures, and warming in a water bath can help dissolve during dilution.</p>
+            <h3>Important Notes</h3>
+            <p>1. Before starting the experiment, please prepare all reagents in advance. When diluting reagents or samples, they must be mixed evenly, and try to avoid foaming when mixing.</p>
+            <p>2. When using the reagent kit for the first time, centrifuge various reagent tubes for a few minutes to concentrate the liquid on the cap and walls of the tube to the bottom.</p>
+            <h3>Operating Procedures</h3>
+            <p>1. Bring all reagents to room temperature (18-25°C) and let them equilibrate for at least 30 minutes, prepare reagents as described above, and have them ready for use.</p>
+            <p>2. Take out the enzyme-linked plate, set up one blank control well without adding any liquid; for each standard point, set up two wells in sequence, adding the corresponding standard 50μl to each well; for the remaining detection wells, directly
+                add the test specimen 50μl.</p>
+            <p>3. Add 50μl of enzyme conjugate to each well (except for the blank control well), mix well, apply a non-drying adhesive seal, and incubate at 37°C for 1 hour.</p>
+            <p>4. Manually wash the plate, discard the liquid in the wells. Fill each well with wash liquid, let it sit for 10 seconds, then spin dry, repeat this process three times, and then pat dry; if using an automatic plate washer, select the wash
+                three times program, and pat dry after washing.</p>
+            <p>5. Add 50μl of substrate solution A and 50μl of substrate solution B to each well, mix well, and incubate at 37°C in the dark for 15 minutes, then add 50μl of stop solution to each well.</p>
+            <p>6. Measure the optical density (OD value) of each well at 450nm wavelength with a microplate reader. Perform the test within 10 minutes after the reaction is terminated.</p>
+            <h3>Operating Points</h3>
+            <p>1. To ensure the accuracy of the test results, it is recommended to set up double wells for both standards and samples. A standard curve should be made for each test.</p>
+            <p>2. If the content of the test substance in the specimen is too high, please dilute with an appropriate solution first to make the sample fit within the detection range of the reagent kit, and then multiply by the corresponding dilution factor
+                for the final calculation.</p>
+            <p>3. Pipetting: When pipetting, please use disposable clean tips to avoid cross-contamination. Pipetting should be as gentle as possible to avoid foaming, add the sample to the bottom of the enzyme-linked plate wells, and do not add along the
+                well walls. It is best to control the pipetting time within 10 minutes, and if there are many samples, it is recommended to use a multi-channel pipette.</p>
+            <p>4. Incubation: To prevent sample evaporation or contamination, the enzyme-linked plate must be covered with a plate seal during the incubation process, and the plate should not be in a dry state during the experiment. The temperature of the
+                incubator should be monitored at any time to ensure it is constant at 37°C, and adjusted in time. The incubator should not be opened too many times during the incubation process to avoid affecting the temperature balance.</p>
+            <p>5. Washing: The washing process is very important, and insufficient washing can easily lead to false positives.</p>
+            <p>Manual washing method: Suck or spin off the liquid inside the enzyme-linked plate (do not touch the well walls and bottom); lay several layers of absorbent paper on the experimental table, place the plate face down and pat it hard a few times;
+                inject the recommended wash buffer into the wells at 200μl/well, soak for 10 seconds. Repeat this process several times as described in the operating steps.</p>
+            <p>Automatic washing: If an automatic plate washer is available, it should be used in the formal experimental process after becoming proficient in its use.</p>
+            <p>6. Color development: To ensure the accuracy of the experimental results, the stop solution should be added as soon as possible after the substrate reaction time is up. You can observe the color development at intervals after adding the substrate
+                solution to control the reaction time (for example, every 10 minutes). When the standard wells 3-4 in front are obviously gradient blue, and the last 3-4 wells are not obviously colored, you can add the stop solution to terminate the reaction,
+                at which point the blue color will immediately turn yellow. The order of adding the stop solution should be as similar as possible to the order of adding the substrate solution.</p>
+            <p>7. The substrate solution should be light blue or colorless, if the color turns dark, it must be discarded. The substrate solution is prone to contamination, please store it properly away from light.</p>
+            <h3>Data Processing</h3>
+            <p>Subtract the values of the standards and samples from the blank well values and plot the curve, if duplicate wells are set, their average values should be taken for calculation.</p>
+            <p>With the concentration of the standards as the vertical coordinate (logarithmic scale) and the OD values as the horizontal coordinate (logarithmic scale), plot the standard curve on logarithmic coordinate paper.</p>
+            <p>It is recommended to use professional curve-making software for analysis, which can be downloaded from our website "Curve Expert", and make the standard curve according to the prompts.</p>
+            <p>Based on the OD value of the sample, find the corresponding concentration from the standard curve; or calculate the regression equation of the standard curve with the concentration and OD value of the standard, and then substitute the OD value
+                of the sample into the equation to calculate the sample concentration.</p>
+            <p>If the sample was diluted before testing, the final calculation should be multiplied by the corresponding dilution factor to obtain the actual concentration of the sample.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

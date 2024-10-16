@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/5283/img/logo.webp" />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+    <!-- CSS -->
+    <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'aos.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'page.css') }}" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'style.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'aos.js') }}"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <title>{% block title %}{% endblock %} | AFMU-China - iGEM 2024</title>
+
+</head>
+
+<body>
+
+    {% include 'menu.html' %} {% block page_content %}{% endblock %} {% include 'footer.html' %}
+
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

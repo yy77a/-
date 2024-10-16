@@ -1,0 +1,187 @@
+{% extends "layout.html" %} {% block title %}Engineering Success{% endblock %} {% block lead %}Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle. This achievement
+should be distinct from your Contribution for Bronze.{% endblock %} {% block page_content %}
+
+<!-- <div class="row mt-4">
+  <div class="col">
+    <div class="bd-callout bd-callout-info">
+      <h4>Silver Medal Criterion #1</h4>
+      <p>Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.</p>
+      <p>If you plan to show engineering success by creating a new Part that has been shown to work as expected, you must document your contribution on the Part's Main Page on the <a href="https://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria.</p>
+      <hr>
+      <p>Please see the <a href="https://competition.igem.org/judging/medals">2024 Medals Page</a> for more information.</p>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="background-overlay"></div>
+<img class="X-background" src="https://static.igem.wiki/teams/5283/notebook-img/wetlab-background.webp" alt="X-background">
+<div class="X">
+    <div class="X-title">
+        <span>Engineering</span>
+    </div>
+
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#one" id="nav-one">Overview</a></li>
+            <li><a href="#two" id="nav-two">Protein Expression and Secretion </a></li>
+            <li><a href="#three" id="nav-three">Molecular Structure </a></li>
+
+
+        </ul>
+    </div>
+
+    <div class="X-content">
+        <div class="h" id="one">
+            <h1>Overview</h1>
+
+            <h5><span class="italic">“Failure is simply the opportunity to begin again, this time more intelligently. ——Henry Ford”</span></h5>
+            <p>Despite in car engineering or biological engineering, the Design-Build-Test-Learn cycle is a crucial methodology in engineering that emphasizes iterative improvement just as Mr. Ford summarized. By designing a prototype, building it, testing
+                its performance, and learning from the results, whether negative or postive, we can systematically identify flaws and areas for enhancement. This iterative process allows our team to make informed decisions based on empirical data rather
+                than assumptions. Each cycle not only refines the current design but also fosters innovation by encouraging experimentation and adaptation. Ultimately, this approach leads to more effective, reliable, and more comprehensive solutions,
+                significantly improving the overall quality of the engineering of our project.</p>
+
+            <h4>Have they used models to meaningfully predict the behavior of their system or guide their experimental or design choices, or alternatively, have they subsequently built models that characterize and explain how their system works?</h4>
+            <p> In early stage, we had brainstorms and discussions about the preliminary designing and as we progress, we had several meet-ups to conduct experiments and discuss about the results, and get inspired from failures to come up with better ideas.
+                Throughout our project, we fully adhere the iterative “design-build-test-learn” cycle of engineering.</p>
+            <h4>What experiments did the team do, and were the data replicated or built upon?</h4>
+            <p> We conducted various experiments throughout cycles, which include using bile acid to stimulate our expression system we successfully produced our target molecules and we extracted and purified them afterwards for further cell experiments.
+            </p>
+            <h4>How rigorous are their experimental designs and measurements?</h4>
+            <p> We represent our extremely rigorous designing in details at our <a href="{{ url_for('pages',page='results')}}#one">result page</a> and <a href="{{ url_for('pages',page='protocol')}}#one">protocol page</a>. We strictly follow the safety guidelines and standardized procedures during our experiments. We also took a variety of measurements for
+                our results to reach the best criteria and the most persuasive conclusion. Details of our measurements can be found in the <a href="{{ url_for('pages',page='protocol')}}#one">result page</a>.</p>
+            <h4>How much attention have the teams given to making the progress they have made reusable? For parts, or part collections, how well characterized are they? Is this clearly documented in the Registry? Would you be happy to use these parts?</h4>
+            <p>We have standardized and uploaded the parts we used in our project to meet the iGEM community requirements. We welcome and appreciate you to use our part and please do contact us if you have any enquiries about its usage. You can learn more
+                in the <a href="{{ url_for('pages',page='parts')}}#one">parts page</a>.</p>
+        </div>
+
+        
+            <h1>Project design </h1>
+            <div class="h" id="two">  
+            <h2>Protein Expression and Secretion</h2>
+
+            <h3>Cycle 1- Food-borne Stress Induced Expression of Both Molecules</h3>
+
+            <h4>Design </h4>
+
+            <p>Currently, a variety of treatments for type 2 diabetes are available and continuously evolving. However, each approach have some inherent limitations, whether being invasive or not sufficiently durable. Traditional therapies, such as pharmacological
+                interventions, may have a range of adverse effects and impose significant physical and psychological stress on patients due to frequent insulin injections. Conversely, more innovative treatments, like insulin pumps, also rely on invasive
+                implantation procedures, which may not be ideal for all patients. </p>
+            <p>Therefore, after some literature searching and reading, we found <strong>Fibroblast Growth Factor 21(FGF21)</strong> and <strong>P9 protein</strong> as ideal molecules that we can express with synthetic biology methods. </p>
+            <p>FGF21 is a member of the fibroblast growth factor family, which plays a crucial role in various physiological processes, including metabolism, insulin sensitivity, and energy homeostasis. Insulin resistence of patients is
+                a pain point in t2dm treatment, so we chose FGF21 as a molecule to express and secrete from our engineered bacteria. <span class="italic">Lactobacillus lactis</span> is itself a part of the intestinal flora, so it can minimize some potential
+                safety concerns, its also widely used as an engineering bacteria which offered us more designing options.</p>
+            <p>The P9 protein derived from <span class="italic">Akkermansia muciniphila</span>, has garnered significant attention due to its unique properties and potential health benefits. This protein is involved in various metabolic
+                processes and plays a crucial role in maintaining gut homeostasis. Studies have shown that it can stimulate GLP-1 seceretion of human intestine cells, which can contribute to the trending GLP-1 therapy for T2DM.</p>
+
+            <h4>Build</h4>
+            <p>A practical challenge is controlling the expression of FGF21 and P9, as persistent secretion of these factors may lead to potential side effects, which we seek to avoid. Therefore, we aim to regulate the expression of these molecules in accordance
+                with the postprandial blood glucose variation curve. This approach is particularly crucial, as postprandial periods represent a critical challenge for diabetes patients. By targeting expression during these times, we hope to address the
+                most difficult phase of glycemic control.</p>
+            <p>The GroESL promoter was chosen as the key module to realize postprandial secretion of both molecules. It can function under <strong>bile acid stress stimulation</strong> after meals and start the expression of FGF21 and P9.
+            </p>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-1.webp" alt="eng-1">
+            <h6>Figure 1- The designed sequence for induced expression of FGF21.</h6>
+
+            <h4>Test</h4>
+            <p>We used software to simulate the binding of FGF21 with its receptor, details can be seen in the molecular simulation iteration.</p>
+            <p>We initially followed the conditions from a reference, but the results shown that the absence of target molecules in the supernatant is inconsistent with the findings reported in the reference.</p>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-2-1.webp" alt="eng-2-1">
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-2-2.webp" alt="eng-2-2">
+            <h6>Figure 2- The ELISA result of FGF21 under different stimulation condition.</h6>
+
+            <h4>Learn</h4>
+            <p>To address this issue, we consulted our advisor and senior researchers in the laboratory who have conducted similar studies. We concluded that the negative results may be attributed to the short stimulation time, which likely prevented the
+                expression system from completing a full cycle of expression and secretion. So we changed our stimulation condition and more details can be seen in <a href="{{ url_for('pages',page='results')}}#one">results</a> page. We also considered that under conditions of induced expression for both
+                molecules, their secretion efficiency would be impacted, potentially hindering their optimal efficacy.</p>
+
+            <h3>Cycle 2- Constitutive Expression of P9</h3>
+            <h4>Design</h4>
+            <p>To avoid the reduction in efficiency caused by the competition between the two secretion of the two molecules, we decided to employ constitutive expression for P9. Constitutive expression utilizes fewer resources and allows for continuous
+                expression over an extended period, thereby ensuring an adequate supply of receptors and maximizing the functional effect.</p>
+            <h4>Build</h4>
+
+            <p>To better present P9, we designed the P32 promoter , the P9 sequence, and an cA anchoring protein sequence together. By employing this approach, we aim to anchor P9 <strong>on the bacteria surface</strong>, thereby facilitating
+                direct stimulation of GLP-1 secretion and enhancing its therapeutic efficacy.</p>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-2.webp" alt="eng-2">
+            <h6>Figure 3- The designed sequence for constitutive expression of P9.</h6>
+
+            <h4>Test</h4>
+            <p>We also employed software to simulate the structure of the P9 fusion protein, and the results indicated that it did not impact the functionality of P9 itself, more details can be seen in the molecular structure iteration.</p>
+            <p> Additionally, we performed immunofluorescence staining using a fluorescent antibody specific to the FLAG tag, which demonstrated that the fusion protein was presented on the bacterial surface. More details about the experiment can be seen in <a href="{{ url_for('pages',page='results')}}#one">result</a></p>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-3-1.webp" alt="eng-3">
+            <h6>Figure 4- The fluorescence of engineered bacteria.</h6>
+            <h4>Learn</h4>
+            <p>During the iterative process, we realized the importance of not confining our efforts to theoretical considerations alone; it is equally essential to take practical issues such as expression efficiency into account. Moreover, after encountering
+                failures in reproducibility, we recognized the necessity of actively adjusting our experimental approach in order to successfully obtain results.</p>
+ <div class="h" id="three"> 
+            <h2>Molecular Structure</h2>
+            <h3>Cycle 1- The FGF21 Fusion Protein</h3>
+
+            <h4>Design</h4>
+            <p>Through some literature reading, we have observed that the passage of FGF21 through the bacteria membrane is relatively challenging. Therefore, we aim to facilitate this process by employing a fusion expression approach, combining FGF21 with
+                an auxiliary factor to enhance its secretion.</p>
+
+            <h4>Build</h4>
+            <p>We chose LMWP to form the fusion protein with FGF21. It can enhance the membrane translocation capability of FGF21. We also identified the receptor structure of FGF21 from literature and performed simulations of our fusion
+                protein and its interaction with the receptor.</p>
+
+            <h4>Test</h4>
+            <p>We chose to combine LMWP with the <strong>C-terminus</strong> of FGF21 and conducted structural modeling.</p>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-4.webp" alt="eng-4">
+            <h6>Figure 5- The structure of the first FGF21 fusion protein.</h6>
+            <p>And simulated its combination with the receptor afterwards.</p>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-5.webp" alt="eng-5">
+            <h6>Figure 6- The combination simulation of FGF21 and its receptor.</h6>
+
+            <h4>Learn</h4>
+            <p>Upon investigation, we discovered that the fibroblast growth factor receptor (FGFR) exists as a dimer of approximately 58 kDa within the cell, with a distance that can reach up to 105 angstroms, which is significantly greater than the 7.3
+                angstroms separation between LMWP and the active site of FGF21. Consequently, we have confirmed that the first generation of FGF21-LMWP fusion protein was unsuccessful.</p>
+
+
+            <h3>Cycle 2- Improvement of FGF21 Fusion Protein</h3>
+            <h4>Design</h4>
+            <p>Given that our previous design obstructed the active binding site of FGF21 with its receptor, we need to redesign the structure of the fusion protein to facilitate effective binding with its receptor.</p>
+
+            <h4>Build</h4>
+            <p>Due to the previous binding of LMWP to the C-terminus of FGF21 obstructing the active binding site for the interaction of FGF21 with its receptor, we have chosen to recombine LMWP with the <strong>N-terminus</strong> of FGF21 in hopes of exposing
+                the active site of FGF21.</p>
+
+            <h4>Test</h4>
+            <p>Using PyMOL for visualization, we examined the three-dimensional conformation of the FGF21-LMWP complex. As shown in the picture, the active sites of FGF21 are highlighted in magenta, while the LMWP segment is depicted in yellow. The LMWP
+                peptide displays a relatively loose conformation with an undefined spatial structure and low polarity. These characteristics suggest minimal risk of detrimental intramolecular interactions between LMWP and FGF21, which could otherwise
+                obstruct FGF21's binding sites to its receptor, FGFR.</p>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-6.webp" alt="eng-6">
+            <h6>Figure 7- The structure of the second FGF21 fusion protein.</h6>
+
+
+            <h4>Learn</h4>
+            <p>Through software simulations, we gained a comprehensive understanding of the guiding role of structural prediction in experimental design. Similarly, we conducted relevant structural simulations for the P9 fusion protein.</p>
+
+            <h3>Cycle 3- The P9 Fusion Protein</h3>
+            <h4>Design</h4>
+            <p>Inspired by the structural simulations of the FGF21 fusion protein, we also aim to validate the feasibility of the P9 and anchoring protein fusion protein through software structural simulations. </p>
+            <h4>Build</h4>
+
+            <p>As previously mentioned, we aim to achieve the fusion expression of P9 with the anchored protein to enable its immobilization on the surface of the bacterial cell. Therefore, we continued to predict its structure to assess whether this modification
+                would impact the normal function of the P9 protein.</p>
+            <h4>Test</h4>
+            <p>Regarding the P9 protein, there is currently no research on its active sites, so we used AlphaFold2 for molecular docking. In the figure, the green portion represents the P9 protein, the yellow represents the P9 protein receptor ICAM2, and
+                the light blue is the cA anchoring protein. </p>
+            <p>After finding P9's active site, considering of our previous experiences in the simulation of FGF21 fusion protein, we tried to attach the anchored protein to the N-terminus of the P9 protein and simulated its structure. And the hydropathy
+                predictions indicate that the P9 protein and the cA anchor protein have <strong>strong hydrophobic interactions</strong>, which facilitates their tight binding in aqueous solutions rather than forming a loose structure that might potentially
+                obscure active sites, more details can be seen in <a href="{{ url_for('pages',page='model')}}#one">modeling</a> </p>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-7.webp" alt="eng-7">
+            <h6>Figure 8- The structure of the first P9 fusion protein.</h6>
+            <img src="https://static.igem.wiki/teams/5283/eng-img/eng-8.webp" alt="eng-8">
+            <h6>Figure 9- The combination of P9 fusion protein and its receptor.</h6>
+
+            <h4>Learn</h4>
+            <p>Through structural simulations of the two fusion proteins, we mitigated potential factors that could lead to experimental failure and provided a better molecular understanding of the experimental principles. This not only contributes to the
+                modeling aspects of our project but also represents an indispensable component in our engineering success.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

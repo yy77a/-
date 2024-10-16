@@ -1,0 +1,116 @@
+{% extends "layout.html" %} {% block title %}Proof of Concept{% endblock %} {% block lead %}You can describe the results of your project and your future plans here.{% endblock %} {% block page_content %}
+
+
+<div class="background-overlay"></div>
+<img class="X-background" src="https://static.igem.wiki/teams/5283/backgroundp/proof-of-concept1.webp" alt="X-background">
+<div class="X">
+    <div class="X-title">
+        <span>Proof of Concept</span>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#one" id="nav-one">Overview</a></li>
+            <li><a href="#two" id="nav-two">Part 1: Construction of strains</a></li>
+            <li><a href="#three" id="nav-three">Part 2: Foodborne-stress induced secretion strategy was successful</a></li>
+            <li><a href="#four" id="nav-four">Part 3: P9 constitutive expression on the surface was successful</a></li>
+            <li><a href="#five" id="nav-five">Part 4: The engineered <span class="italic">L. lactis strain NZ9000</span> successfully improved insulin resistance and GLP-1 secretion</a></li>
+        </ul>
+    </div>
+
+    <div class="X-content">
+        <div class="h" id="one">
+            <h1>Overview</h1>
+            <p>The ultimate goal of our project is to realize the innovative treatment of diabetes by engineered <span class="italic">L. lactis strain NZ9000</span>. On the one hand, we aim to enhance the body's own glycemic control; on the other hand, we employ a foodborne-stress induced   
+                smart glucoregulatory model to aid in the alleviation, control and even cure of diabetes in a non-invasive, long-lasting and more user-friendly manner. In these cases, successful construction of the strains and
+                its ability to improve insulin resistance and GLP-1 secretion were our main results. Therefore, as a proof of concept, we present the following results: the bacterial plasmids design, the foodborne-stress induced secretion of FGF21（BBa_K5283016）
+                , the successful constitutine expression of P9 （BBa_K5283019）on the surface, the successful improvement of insulin resistance, and the promotion of GLP-1 secretion.</p>
+        </div>
+
+        <div class="h" id="two">
+            <h1>Part 1: Construction of strains</h1>
+            <p>To achieve a long-lasting and non-invasive drug delivery method for diabetes, we have chosen food-grade lactic acid bacteria as our chassis cells. This type of bacteria is not only a normal probiotic in the human body that can reside in the intestines for a long time to regulate the intestinal microenvironment, but it can also be found in everyday fermented foods like yogurt, allowing patients to ingest glycemic-regulating microorganisms in a more comfortable and less psychologically burdensome manner. To adapt to normal fluctuations in human blood glucose levels, we implemented different secretion strategies for FGF21 (BBa_K5283016) and P9 (BBa_K5283019):</p>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-1-1.webp" alt="pro-1">
+            <h6>FIgure 1- Engineering Applications of <span class="italic">L. lactis</span></h6>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-1-2.webp" alt="pro-1">
+            <h6>FIgure 2- Daily Blood glucose Fluctuations</h6>
+
+            <h2>(1) The design of plasmid secreting FGF21 induced by foodborne-stress: pGroESL-SP<sub>USP45</sub>-LEISSTCDA-Linker-LMWP-Linker-FGF21（BBa_K5283029）</h2>
+            <img src=" https://static.igem.wiki/teams/5283/pro-img/pro-proof-1-3.webp " alt="pro-1 ">
+            <h6>Figure 1.1.1- The construction of FGF21 plasmid</h6>
+
+            <p>To achieve a rapid response to cholate concentration, and indirectly to the increase in blood glucose levels after meals, the engineered <span class="italic">L. lactis strain NZ9000</span> utilize the GroESL promoter (BBa_K5283028) in plasmid A to initiate the transcription and translation of downstream genes.</p>
+            <p>FGF21 (BBa_K5283029) serves as our effector molecule. </p>
+            <p>LMWP (BBa_K5283017), a low molecular weight protamine, acts as a transmembrane-facilitating protein that mediates the endocytosis of the FGF21-SP<sub>USP45</sub> fusion protein by intestinal epithelial cells. At the same time, it also enhances the overall stability of the fusion protein. </p>
+
+            <p>SP<sub>USP45</sub>(BBa_K5283013) is an endogenous signal peptide of the lactic acid bacteria, preventing the toxic effects of exogenous proteins on the engineered strains. SP<sub>USP45</sub> remains on the surface of the engineered <span class="italic">L. lactis strain NZ9000</span> during protein expression. </p>
+
+            <p>His tag is added to facilitate the subsequent separation and purification of FGF21 and to verify its functionality. </p>
+            <p>LEISSTCDA（BBa_K5283014） enhancer peptide is a short-chain polypeptide that has been carefully designed and optimized for synthesis. The elaborate design of this structure enables LEISSTCDA enhancing peptide to efficiently and precisely act on target cells to exert its enhancing effect.</p>
+            <p>Considering the short half-life and thermal stability of FGF21, we changed three amino acid sites to improve its stability and designed an enhanced FGF21, namely EFGF21.(BBa_K5283018).</p>
+
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-1-4.webp" alt="pro-1">
+             <h6>Figure 1.1.2- The sequencing result of FGF21 plasmid</h6>
+            <h2>(2) The design of plasmid constitutively expressing P9 on the surface of <span class="italic">L. lactis strain NZ9000</span>: <span class="italic">p32</span>-SP<sub>USP45</sub>-LEISSTCDA-cA<sub>Anchor</sub>-Linker-P9（BBa_K5283026)</h2>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-1-5.webp" alt="pro-1">
+            <h6>Figure 1.1.3- The construction of P9 plasmid</h6>
+            <p>We used the <span class="italic">p32</span> promoter (BBa_K5283015) to achieve constitutive expression and surface display of P9 (BBa_K5283019) as a complement to the glucose-lowering effect of FGF21.</p>
+            <p>cA<sub>Anchor</sub> (BBa_K5283020) is an anchor protein of lactic acid bacteria, which can anchor P9 to the surface, ensuring  a higher quantity of P9 on the surface of the <span class="italic">L. lactis strain NZ9000</span>, thereby increasing the contact opportunities with the ICAM-2 receptors on intestinal L cells.</p>
+
+            <p>The FLAG tag protein is used for the fluorescent localization, separation, and purification of the P9 protein.
+            </p>
+
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-1-6.webp" alt="pro-1">
+            <h6>FIgure 1.1.4- The sequencing result of P9 result</h6>
+
+        </div>
+
+        <div class="h" id="three">
+            <h1>Part 2: Foodborne-stress induced secretion strategy was successful</h1>
+            <p>To verify the response of the GroESL promoter (BBa_K5283028) to cholate concentrations and the normal foodborne-stress induced secretion of FGF21, we designed different cholate concentration gradients. According to the concentration of FGF21 in the supernatant measured by ELISA, the dose-effect relationship was determined by modeling. Comparing the results, we found that the GroESL promoter could effectively respond to cholate stimulation and its secretion increased with the prolongation of cholate stimulation.</p>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-2-1new2.webp" alt="pro-2">
+            <h6>Figure 1.2.1- The process of ELISA to measure the concentration of FGF21 </h6>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-2-2.webp" alt="pro-2">
+            <h6>Figure 1.2.2- The ELISA result with different stimulation time </h6>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-2-3.webp" alt="pro-2">
+            <h6>Figure 1.2.3- The ELISA result under different concentration condition</h6>
+
+        </div>
+
+
+        <div class="h" id="four">
+            <h1>Part 3: P9 constitutive expression on the surface was successful</h1>
+            <p>The Flag tag introduced into the plasmid (BBa_K5283026) helped us visualize P9 on the surface of  <span class="italic">L. lactis strain NZ9000</span> by immunofluorescence staining.</p>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-3-1.webp" alt="pro-3">
+            <h6>Figure 3.1- The fluorescence of the engineered bacteria</h6>
+
+        </div>
+
+
+        <div class="h" id="five">
+            <h1>Part 4: The engineered <span class="italic">L. lactis strain NZ9000</span> successfully improved insulin resistance and GLP-1 secretion</h1>
+            <h2>(1) Foodborne-stress induced secretion of FGF21 successfully improved insulin resistance</h2>
+            <p>Our ultimate goal is to improve insulin resistance in adipocytes, so we chose to induce  adipogenic differentiation of 3T3-L1 cell line to obtain adipocytes and induced insulin resistance with RAW conditioned medium. At the same time, our fusion protein carries His tag, through which we can isolate and purify FGF21 (BBa_K5283029) and further study its biological function. Isolated FGF21 was used to treat adipocytes to improve insulin resistance, followed by the addition of insulin to activate the PI3K/Akt/mTOR signaling pathway. The improvement of insulin sensitivity was detected by Akt phosphorylation using Western blotting.</p>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-4-1new2.webp" alt="pro-4">
+            <h6>Figure 4.1.1- The overall process of verification</h6>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-4-2.webp" alt="pro-4">
+            <h6>Figure 4.1.2- The differentiation result</h6>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-4-3.webp" alt="pro-4">
+            <h6>Figure 4.1.3- The WB result</h6>
+            <h2> (2) The P9 expressed on the surface of engineered <span class="italic">L. lactis strain NZ9000</span>  successfully promoted the secretion of GLP-1</h2>
+            <p>In theory, P9 (BBa_K5283019) stimulates the ICAM-2 receptor of intestinal L cells, so we chose the NCI-H716 cell as our intestinal L cell model cell. The NCI-H716 cell was co-cultured with the engineered <span class="italic">L. lactis strain NZ9000</span> that can express P9 on the surface. The supernatant was collected and the concentration of GLP-1 secreted by NCI-H716 cells was measured by ELISA. At the same time, the expression of genes related to GLP-1 secretion (<span class="italic">Gcg, Pcsk1</span> and <span class="italic">Pcsk2</span>) was significantly up-regulated by qRT-PCR analysis.</p>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-4-2new2.webp" alt="pro-4">
+            <h6>Figure 4.2.1- The overall process of the experiment</h6>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-4-5.webp" alt="pro-4">
+            <h6>Figure 4.2.2- The ELISA result showing P9 stimulate the secretion of GLP-1 </h6>
+            <img src="https://static.igem.wiki/teams/5283/pro-img/pro-proof-4-6.webp" alt="pro-4">
+            <h6>Figure 4.2.3- The qRT-PCR result of GLP-1gene expression</h6>
+            <p>Collectively, these results indicate that our food-borne stress induced secretion system and constitutive membrane surface expression system can perform well in the transcription and translation of effector molecules. This proof-of-concept
+                also demonstrates the potential of engineering lactic acid bacteria to further develop into a novel synthetic biology toolbox for improving insulin resistance and lowering blood glucose.</p>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

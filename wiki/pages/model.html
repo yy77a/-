@@ -1,0 +1,288 @@
+{% extends "layout.html" %} {% block title %}Model{% endblock %} {% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %} {% block page_content %}
+
+<!-- <div class="row mt-4">
+    <div class="col">
+        <div class="bd-callout bd-callout-info">
+            <h4>Best Model</h4>
+            <p>Models and computer simulations can help us understand the function and operation of BioBrick Parts and Devices. Simulation and modeling are critical engineering skills that can contribute to project design or provide a better understanding
+                of the modeled process. These processes are even more useful and/or informative when real world data are included in the model. This award is for teams who build a model of their system and use it to inform system design or simulate expected
+                behavior before, or in conjunction with, experiments in the wetlab.</p>
+            <p>To compete for the Best Model prize, select the prize on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and describe your work on this page.</p>
+            <hr>
+            <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-lg-8">
+        <h2>Overview</h2>
+        <hr>
+        <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior
+            of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
+    </div>
+    <div class="col-lg-4">
+        <h2>Inspirations</h2>
+        <hr>
+        <ul>
+            <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
+            <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
+            <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
+            <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
+            <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
+            <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
+            <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
+        </ul>
+    </div>
+</div> -->
+
+<div class="background-overlay"></div>
+<img class="X-background" src="https://static.igem.wiki/teams/5283/backgroundp/model.webp" alt="X-background">
+<div class="X">
+    <div class="X-title">
+        <span>Model</span>
+    </div>
+
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#one" id="nav-one">Overview</a></li>
+            <li><a href="#two" id="nav-two">Prediction of the Activated Sites of FGF21</a></li>
+            <li><a href="#three" id="nav-three">Prediction of FGF21 Stablility</a></li>
+            <li><a href="#four" id="nav-four">Construction of Enhanced FGF21(EFGF21)</a></li>
+            <li><a href="#five" id="nav-five">Drawing Enginerring Bacteria Growth Curve</a></li>
+            <li><a href="#six" id="nav-six">Future Work</a></li>
+            <li><a href="#seven" id="nav-seven">Reference</a></li>
+        </ul>
+    </div>
+
+    <div class="X-content">
+        <div class="h" id="one">
+            <h1>Overview</h1>
+            <p>Modeling a pivotal role in the field of life sciences, especially in the construction of protein structures. It allows researchers to predict and visualize the three-dimensional shapes of proteins based on their amino acid sequences. In this
+                year's project, successfully achieving the FIST project requires not only experimental verification but also essential preliminary modeling work. Good modeling can help avoid some detours in the experimental phase, much like standing on
+                the shoulders of giants.</p>
+            <p>Firstly, An important aspect of constructing a fusion protein is that it must not affect the physiological activity of the protein, meaning it should not interfere with its binding to the receptor. To achieve this, it is necessary to carry
+                out the prediction of essential protein active sites and the analysis of the three-dimensional structure of the fusion protein. In addition, to enhance the stability and binding efficiency of the fusion protein in physiological conditions,
+                it is also feasible to make appropriate edits to certain amino acid sites. Our modeling work will focus on the two points mentioned above.</p>
+        </div>
+
+        <div class="h" id="two">
+            <h1>Prediction of the Activated Sites of FGF21</h1>
+            <p>There is stability concern regarding the fusion protein of FGF21 with LMWP, as the fusion may impact the three-dimensional structure of FGF21, particularly in its receptor interactions, thereby reducing its functional efficiency. To investigate
+                this, we performed a protein-protein interaction (PPI) network analysis using the STRING database (illustrated in the figure 1).</p>
+            <p>The receptor affinity score ranges from 0 to 1 and is calculated by integrating probabilities from various evidence channels, adjusted for the likelihood of random interactions (von Mering et al., 2005). To compute the combined score, we first
+                remove a 'prior' probability (p=0.041) from each channel's score, then combine the scores as follows:</p>
+            <h3>1. For each of the scores for the individual channels (s_i) remove the prior (p=0.041):</h3>
+            <div class="formula">
+                \( s_i = \frac{p}{1 - p} \)
+            </div>
+            <h3>2. Combine the scores of the channels:</h3>
+            <div class="formula">
+                \( s_{\text{running total}} = 1 - s_{\text{running total}}(1 - s_{i, \text{no prior}}) \)
+            </div>
+            <h3>3. Add the prior back (once):</h3>
+            <div class="formula">
+                \( s_{\text{total}} = s_{\text{running total}} + p(1 - s_{\text{running total}}) \)
+            </div>
+            <p>Using this formula, we calculated and compared the receptor affinity scores of highly homologous derivatives of FGF21 and constructed a PPI network for the top ten receptors. The core receptors with scores above 0.99 included KLB (0.999),
+                FGFR1 (0.998), and FGFR4 (0.992), closely aligning with the receptors of unmodified native FGF21. This validation suggests that the FGF21-LMWP fusion protein does not introduce new active sites or alter existing ones.</p>
+            <img src="https://static.igem.wiki/teams/5283/model/model-1-1.webp" alt="model-1">
+            <h6>Figure 1. The PPI network of potential receptors of FGF21-LMWP fusion protein.</h6>
+        </div>
+
+
+        <div class="h" id="three">
+            <h1>Prediction of FGF21 Stablility</h1>
+            <p>A fusion protein combining fibroblast growth factor 21 (FGF21) with a transmembrane peptide, low molecular weight protamine (LMWP), was designed to enhance the transport and circulation of FGF21 during the protein engineering phase. We assessed
+                the stability of this fusion protein. Using PyMOL for visualization, we examined the three-dimensional conformation of the FGF21-LMWP complex. As shown in Figure 2, the active sites of FGF21 are highlighted in magenta, while the LMWP segment
+                is depicted in yellow. The LMWP peptide displays a relatively loose conformation with an undefined spatial structure and low polarity. These characteristics suggest minimal risk of detrimental intramolecular interactions between LMWP and
+                FGF21, which could otherwise obstruct FGF21's binding sites to its receptor, FGFR.</p>
+
+            <img src="https://static.igem.wiki/teams/5283/model/model-1-2.webp" alt="model-2">
+            <h6>Figure 2. The FGF21-LMWP fusion protein with its active site.</h6>
+            <img src="https://static.igem.wiki/teams/5283/model/model-1-3.webp" alt="model-2">
+            <h6>Figure 3.The hydrophobicity analysis of FGF21-LMWP fusion protein.</h6>
+            <p>Regarding the P9 protein, there is currently no research on its active sites. Creating fusion proteins of P9-cAAnchor with novel structures and functions implies the need for protein design. De novo protein design is a long-standing fundamental
+                goal of synthetic biology, but this complex and challenging task is primarily hindered by the difficulty of reliably predicting the 3D structure of proteins from amino acid sequences. Machine learning algorithms, such as AlphaFold2, may
+                eliminate this obstacle. Therefore, we utilized AlphaFold2 for molecular docking (Zhenyu Yang et al., 2003). In Figure 4, the green portion represents the P9 protein, the yellow represents the P9 protein receptor ICAM2, and the light blue
+                is the cAAnchor protein. The outcomes of the molecular docking demonstrate that the key interaction sites are situated at asparagine at position 633 to valine at position 636.</p>
+            <p>Hydropathy predictions suggest that the P9 protein and the cAAnchor protein exhibit robust hydrophobic interactions, which promote their tight binding in aqueous solutions instead of forming a loose structure that might potentially conceal
+                active sites.</p>
+
+            <img src="https://static.igem.wiki/teams/5283/model/model-1-4.webp" alt="model-3">
+            <h6>Figure 4. The P9-cA<sub>Anchor</sub> fusion protein with its active site.</h6>
+        </div>
+
+
+        <div class="h" id="four">
+            <h1>Construction of Enhanced FGF21(EFGF21)</h1>
+            <p>Previous research has reported low stability for native FGF21 (Onuma Y et al., 2015). To address this, we designed a more stable version, termed enhanced FGF21(EFGF21). We employed SWISS-MODEL for homology modeling, using fibroblast growth
+                factor 21 with the protein ID 6m6e as the template based on both sequence coverage and identity. The sequence identity after alignment exceeds 40% (some suggest 35%), indicating that they are homologous proteins belonging to the same family.</p>
+            <p>We predicted the three-dimensional structure and physicochemical properties using appropriate methods for homologous protein modeling. Initially, we generated Ramachandran plots (Fig. 5, Fig 6), which illustrate the two dihedral angles of
+                the α-carbon: φ (phi) for the C-N bond and ψ (psi) for the C-C bond. While these bonds can theoretically rotate freely, real molecular structures are constrained by steric hindrance and atomic interactions, leading to allowed and disallowed
+                regions in the Ramachandran plot. This plot assesses the quality of homology modeling.</p>
+            <p>When comparing the Ramachandran plot of EFGF21 to that of FGF21, we observed that the amino acids in EFGF21, designed for enhanced stability, are more concentrated in the green allowed region. This indicates that EFGF21 adheres more closely
+                to stereochemical rules.</p>
+            <img src="https://static.igem.wiki/teams/5283/model/model-1-5.webp" alt="model-4">
+            <h6>Figure 5. The Ramachandran plot of FGF21.</h6>
+            <img src="https://static.igem.wiki/teams/5283/model/model-1-6.webp" alt="model-4">
+            <h6>Figure 6. The Ramachandran plot of EFGF21.</h6>
+        </div>
+
+
+        <div class="h" id="five">
+            <h1>Drawing Enginerring Bacteria Growth Curve</h1>
+            <p>The mathematical expression of the E. coli growth model is derived from the exponential growth model known as the Malthus model. However, to account for environmental factors and limitations such as nutrient availability and space, we introduce
+                modifications to this basic model.</p>
+
+            <h2>Initial Assumptions and Model Setup</h2>
+            <p>Let \( N \) represent the number of bacteria at any given time \( t \).</p>
+            <p> \( N_0 \) is the initial bacterial count.</p>
+            <p>\( r \) is the natural, constant growth rate of bacteria in the absence of any environmental stressors.</p>
+            <p>The initial growth model is given by the differential equation:</p>
+            <div class="formula">
+                \( \frac{dN}{dt} = rN \)
+            </div>
+            <h2>Incorporating Environmental Resistance</h2>
+            <p>The growth environment's capacity is finite, thus limiting bacterial growth.</p>
+            <p>We introduce a carrying capacity \( K \), which is the maximum population size that the environment can sustain.</p>
+            <p>The model is adjusted to include this carrying capacity, leading to the logistic growth model:</p>
+            <div class="formula">
+                \( \frac{dN}{dt} = rN \left(1 - \frac{N}{K}\right) \)
+            </div>
+            <h2>Parameter Adjustments</h2>
+            <p>The natural growth rate \( r \) is adjusted based on the bacterial count to reflect increased environmental resistance with higher population densities.</p>
+            <p>This adjustment introduces a quadratic term to model the saturation effect:</p>
+            <div class="formula">
+                \( \frac{dN}{dt} = r_0 N \left(1 - \frac{N}{K}\right) - \alpha N^2 \)
+            </div>
+            <p>Here, \( r_0 \) is the maximum specific growth rate when \( N \) is near zero, and \( \alpha \) is a parameter that scales the impact of population density on growth rate.</p>
+            <h2>Hypothesis and Parameter Relationships</h2>
+            <p>We hypothesize that as \( N \) approaches the carrying capacity \( K \), the growth rate \( r \) decreases to zero.</p>
+            <p>At \( N = K \), \( r(N) = 0 \), thus providing a relationship:</p>
+            <div class="formula">
+                \( \alpha = \frac{r_0}{K} \)
+            </div>
+            <h3>Model Equations</h3>
+            <p>The final form of the model used for fitting experimental data is:</p>
+            <div class="formula">
+                \( \frac{dN}{dt} = r_0 N \left(1 - \frac{N}{K}\right) - \frac{r_0 N^2}{K} \)
+            </div>
+            <p>This equation accounts for both exponential growth at low densities and the slowing of growth as \( N \) approaches \( K \).</p>
+            <p>Due to the scarcity of detailed analyses on fitting the Logistic equation based on OD measurements online, we are open-sourcing the code we used to create growth curves for everyone's reference and learning.</p>
+            <div class="content-button">
+                <button class="toggle-control-button">Learn more!</button>
+            </div>
+            <div class="p-content">
+                <p>import numpy as np</p>
+                <p>import pandas as pd</p>
+                <p>import matplotlib.pyplot as plt</p>
+                <p>from scipy.optimize import curve_fit</p>
+                <p>from sklearn.cluster import KMeans</p>
+
+                <p>file_path = r'C:\Users\huang\Desktop\生长.xlsx'</p>
+                <p>df = pd.read_excel(file_path, sheet_name='Sheet1', usecols='C:M', skiprows=1)</p>
+
+                <p>U_1 = df.values</p>
+                <p>U_1[:, 1:] = U_1[:, 1:] / 1000</p>
+
+                <p>def growth_curve(x, b1, b2, b3):</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;return b1 / (1 + b2 * np.exp(-b3 * x))</p>
+
+                <p>a_num = 1</p>
+                <p>b_num = []</p>
+                <p>Rsquare = []</p>
+
+                <p>plt.figure(figsize=(10, 6))</p>
+
+                <p>for i in range(3, U_1.shape[1]):</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;x = U_1[:, 0]</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;y = U_1[:, i]</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;initial_params = [1, 0.6, 4.3]</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;popt, _ = curve_fit(growth_curve, x, y, p0=initial_params)</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;y1 = growth_curve(x, *popt)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;residuals = y - y1</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;ss_res = np.sum(residuals ** 2)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;ss_tot = np.sum((y - np.mean(y)) ** 2)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;r_squared = 1 - (ss_res / ss_tot)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Rsquare.append(r_squared)</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;plt.plot(x, y, '*', label=f'原始数据 {i}')</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;x1 = np.linspace(min(x), max(x), 300)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;y1_fit = growth_curve(x1, *popt)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;plt.plot(x1, y1_fit, label=f'拟合曲线 {i}')</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;b_num.append(popt)</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;a_num += 1</p>
+
+                <p>plt.xlabel('生长时间(h)')</p>
+                <p>plt.ylabel('OD$_{600}$')</p>
+                <p>plt.legend(loc='best')</p>
+                <p>plt.xticks(np.arange(min(x), max(x) + 2, 2))</p>
+                <p>plt.show()</p>
+
+                <p>b_num = np.array(b_num)</p>
+                <p>kmeans = KMeans(n_clusters=3).fit(b_num[:, [0, 2]])</p>
+                <p>cidx = kmeans.labels_</p>
+
+                <p>plt.figure(figsize=(8, 5))</p>
+                <p>for cluster in range(3):</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;plt.scatter(b_num[cidx == cluster, 0], b_num[cidx == cluster, 2], label=f'聚类 {cluster + 1}')</p>
+
+                <p>for i, txt in enumerate(range(1, len(b_num) + 1)):</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;plt.text(b_num[i, 0], b_num[i, 2] * 1.04, str(txt))</p>
+
+                <p>plt.xlabel('k')</p>
+                <p>plt.ylabel('r')</p>
+                <p>plt.legend()</p>
+                <p>plt.show()</p>
+
+            </div>
+            <p>In developing a mathematical model to describe the growth dynamics of Lactococcus lactis, the following key assumptions are made to simplify the system:</p>
+
+            <h3>Growth Rate Dependency</h3>
+            <p>The growth rate of Lactococcus lactis is only a function of the current bacterial population size, implying that environmental factors such as pH and temperature, once optimized, remain constant and do not influence the growth rate.</p>
+            <h3>Fixed Environment Volume</h3>
+            <p>The culture medium's volume is fixed, introducing a carrying capacity that restricts the maximum population size, beyond which no further increase in population is possible.</p>
+            <h3>Adequate and Constant Nutrient Supply</h3>
+            <p>The culture medium is assumed to have a sufficient and constant supply of nutrients necessary to support the growth of Lactococcus lactis throughout the experiment.</p>
+            <h3>Homogeneous Environment</h3>
+            <p>The culture is homogeneously mixed, ensuring an even distribution of nutrients and bacteria at any given time.</p>
+            <h3>No Genetic Variations</h3>
+            <p>Genetic mutations or variations that might alter the growth characteristics are not considered over the short duration of the experiment.</p>
+            <p>The raw data obtained from the experiment, which included the optical density (OD) readings at 600 nm, were converted into bacterial concentration growth curves. Using a Python program, the OD600nm readings were translated into concentration
+                units (CFU·ml^-1), allowing for the estimation of bacterial numbers.</p>
+
+            <img src="https://static.igem.wiki/teams/5283/model-img/1.webp" alt="model-4">
+            <img src="https://static.igem.wiki/teams/5283/model-img/2.webp" alt="model-4">
+            <h6>Growth curve of lactic acid bacteria containing the plasmid BBa-K5283023</h6>
+        </div>
+
+        <div class="h" id="six">
+            <h1>Future Work</h1>
+            <p><a href="https://2024.igem.wiki/afmu-china/notebook">Our modeling work primarily focus on simulating protein structures in this year</a>, while also providing some useful insights related to bacterial growth for the wider iGEMer community.
+                However, we have a long way to go. Although we attempted to establish a model for drug absorption in the human intestinal lumen, the complexities of influencing factors and environmental conditions prevented us from achieving satisfactory
+                results. Moving forward, we hope to establish a robust model for drug absorption across the intestinal mucosal barrier in an in vitro environment based on our organ-on-a-chip hardware, which will provide ideas and insights for further
+                experimental design.</p>
+        </div>
+
+
+        <div class="h" id="seven">
+            <h1>Reference</h1>
+            <p>Elisabeth Gasteiger, Christine Hoogland, Alexandre Gattiker, Séverine Duvaud, Marc R. Wilkins, Ron D. Appel, and Amos Bairoch. Protein Identification and Analysis Tools on the ExPASy Server. </p>
+            <p>Onuma Y, Yeo CY, Whitman M. XCR2, one of three Xenopus EGF-CFC genes, has a distinct role in the regulation of left-right patterning. Development. 2006 Jan;133(2):237-50. doi: 10.1242/dev.02188. Epub 2005 Dec 8. PMID: 16339189.</p>
+            <p>von Mering C, Jensen LJ, Snel B, Hooper SD, Krupp M, Foglierini M, Jouffre N, Huynen MA, Bork P. STRING: known and predicted protein-protein associations, integrated and transferred across organisms. Nucleic Acids Res. 2005 Jan 1;33(Database
+                issue):D433-7. doi: 10.1093/nar/gki005. PMID: 15608232; PMCID: PMC539959.</p>
+            <p>Yang, Z., Zeng, X., Zhao, Y. *et al.* AlphaFold2 and its applications in the fields of biology and medicine. *Sig Transduct Target Ther* **8**, 115 (2023). </p>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

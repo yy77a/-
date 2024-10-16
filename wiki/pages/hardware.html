@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+  
+
+{% block page_content %}
+
+
+<div class="background-overlay"></div>
+<img class="X-background" src="https://static.igem.wiki/teams/5283/backgroundp/hardware.webp" alt="X-background">
+<div class="X">
+    <div class="X-title">
+        <span>Hardware</span>
+    </div>
+
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#one" id="nav-one">Overview</a></li>
+            <li><a href="#two" id="nav-two">Design </a></li>
+            <li><a href="#three" id="nav-three">Future work</a></li>
+            <li><a href="#four" id="nav-four">Significance</a></li>
+       
+        </ul>
+    </div>
+
+    <div class="X-content">
+        <div class="h" id="one">
+            <h1>Overview</h1>
+            <p>Gut barrieroids are advanced 3D models of the human intestine closely mimic the structure and function of the gut barrier. These organoids are created from stem cells and replicate key features of the intestinal lining, including epithelial cells, tight junctions, and mucus production. The gut barrier plays a crucial role in maintaining gut health by regulating nutrient absorption and preventing harmful substances from entering the bloodstream. Using organ-on-a-chip technology is more beneficial for animal welfare as it reduces the amount of animal use. Additionally, it allows for a more intuitive observation of changes in the physicochemical properties of tissues under in vitro culture conditions. </p>
+            <p>To verify and simulate the intestinal permeation efficiency of the FGF21-LMWP fusion protein, and as a preparation for animal experiments, we designed an intestinal barrier organ-on-a-chip. Unlike traditional transwell culture plates, its significant advantage is that it allows for the seeding of cells on both sides of the semi-permeable membrane. Moreover, different cell types can be cultured in different chambers to simulate various locations within the intestine, better mimicking the 3D structural barrier of the intestinal mucosa.</p>
+        </div>
+             
+        <div class="h" id="two">
+            <h1>Design </h1>
+
+            <h2>Device design</h2>
+
+            <p>Our chip is composed of three chambers as a set (Figure 2). The upper layer consists of two seeding units, A and B, which function as separate culture units when 100 μm  of culture medium is added. When 500 μm of culture medium is added, they can be connected as a single unit. The upper layer is separated from the lower C culture chamber by a 0.4-micron semi-permeable membrane. The lower layer is an independent culture unit that includes columnar areas corresponding to seeding units A and B, with liquid reservoirs D on both sides for convenient medium replacement.</p>
+
+           
+            <h2>Usage Method</h2>
+
+            
+            <h4>Step 1: Seeding in the C Chamber</h4>
+
+            <p>First, coat the porous membrane with type I collagen at 37°C for two hours. Invert the chip and seed fibroblasts to allow them to settle on the porous membrane for approximately 2 to 4 hours. After that, place the chip upright and culture it on a shaking platform for 24 hours.</p>
+
+            
+            <h4>Step 2: Seeding in the A and B Chambers</h4>
+
+            <p>Seed IEC cells (derived from small intestine crypts, polarized monolayer with long, dense microvilli) in the A chamber and HT29 cells (derived from human colon, capable of forming tight junctions) in the B chamber. After independently culturing both chambers for 48 hours, add enough culture medium to connect the two chambers.</p>
+
+           
+            <h4>Step 3: Adding FGF21-LMWP Fusion Protein</h4>
+
+            <p>After verifying the successful construction of the intestinal mucosal barrier in the connected chambers A and B under a microscope, we added the purified FGF21-LMWP fusion protein, which had been sterilized by filtering through a 0.22-micron cell filter. One hour later, the concentration of FGF21 in chamber C was measured using ELISA.</p>
+
+            <img src="https://static.igem.wiki/teams/5283/hardware-img/hd-1.webp" alt="hd-1">
+            <h6>Figure 1- Figure 1: Schematic Diagram of a Single set</h6>
+
+            <img src="https://static.igem.wiki/teams/5283/hardware-img/hd-2.webp" alt="hd-2">
+            <h6>Figure 2: Cross-sectional view of a Single set</h6>
+
+            <img src="https://static.igem.wiki/teams/5283/hardware-img/hd-3.webp" alt="hd-3">
+            <h6>Figure 3: Traditional Transwell Migration Assay</h6>
+
+            <img src="https://static.igem.wiki/teams/5283/backgroundp/hardwarewhite1.webp" alt="hd-4">
+            <h6>Figure 4: Chip Overall Diagram</h6>
+            
+            <div class="h" id="three">
+            <h1>Future Work</h1>
+            <p>1、We will contact the company of precision manufacture to present our design in physical form and hope to make our contribution to research in intestinal organ-on-a-chip technology. </p>
+            <p>2、At the same time, to allow for more adequate contact between the cells and the culture medium, we will design a precision shaking platform compatible with our microfluidic chip in the future. This will better control the direction of fluid flow and shear force, promoting cell growth and preventing detachment. </p>
+            <p>3、Furthermore, we aim to direct the differentiation of human pluripotent stem cells (hPSCs) into a 3D structure that better resembles the physiological structure of the intestine, allowing for a more accurate simulation of the intestinal mucosal barrier.</p>
+            <img src="https://static.igem.wiki/teams/5283/hardware-img/hd-5.webp" alt="hd-5">
+            <h6>Kwon Oet al. Sci Adv. 2021</h6>
+            
+            <div class="h" id="four">
+            <h1>Significance</h1>
+            <p>The gutoid-on-a-chip we designed represents a significant advancement in evaluating drug permeability across the intestinal mucosal barrier. This innovative system closely mimics the human gut environment, integrating the complex structure of the intestinal barrier, which are often missing in traditional in vitro models. By providing a more accurate simulation of the gut's microenvironment, our organoid-on-a-chip allows for precise assessment of drug absorption, transport, and interaction with the intestinal epithelium. This technology offers valuable insights into the efficiency and safety of drug candidates, ultimately accelerating the development of more effective therapeutics with improved bioavailability and reduced side effects.</p>
+
+
+            <h2>Reference</h2>
+            <p><span class="italic">Kwon O, Jung KB, Lee KR, et al. The development of a functional human small intestinal epithelium model for drug absorption. Sci Adv. 2021;7(23):eabh1586.</span></p>
+
+{% endblock %}

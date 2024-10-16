@@ -1,0 +1,185 @@
+{% extends "layout.html" %} {% block title %}Design Project{% endblock %} {% block lead %}{% endblock %} {% block page_content %}
+
+<div class="background-overlay"></div>
+<img class="X-background" src="https://static.igem.wiki/teams/5283/backgroundp/design.webp" alt="X-background">
+<div class="X">
+    <div class="X-title">
+        <span>Design</span>
+    </div>
+
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#one" id="nav-one">Overview</a></li>
+            <li><a href="#two" id="nav-two">Chassis </a></li>
+            <li><a href="#three" id="nav-three">Foodborne-stress induced secretion</a></li>
+            <li><a href="#four" id="nav-four">Constitutive expression of P9</a></li>
+            <li><a href="#five" id="nav-five">Next Stage</a></li>
+
+
+
+        </ul>
+    </div>
+
+    <div class="X-content">
+        <div class="h" id="one">
+            <h1>Overview</h1>
+            <p>We have chosen food-grade <span class="italic">Lactobacillus NZ9000</span> as the chassis cells and designed two protein expression systems: (1) A foodborne-stress induced expression system for FGF21(fibroblast growth factor 21) -LMWP. The LMWP facilitates the entry
+                of FGF21 into the bloodstream, and FGF21 improves tissue insulin resistance. (2) A constitutive expression system that displays <span class="italic">Akkermansia muciniphila</span> P9 protein on the membrane. P9 protein binds to the ICAM-2 receptor on intestinal
+                epithelial L-cells, releasing glucagon-like peptide-1 (GLP-1), which promotes insulin secretion. </p>
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-1-1.webp" alt="des-1">
+        </div>
+
+        <div class="h" id="two">
+            <h1>Chassis</h1>
+            <p>The <span class="italic">L. lactis strain NZ9000</span> is widely acknowledged as a safe and mature chassis vector, its genomic structure has been fully characterized (Sun et al., 2020), and it has been utilized as an oral agent in microbial therapy (Mohseni et al.,
+                2019). We use engineered gut bacteria in the hope that colonized gut bacteria can produce active substances over a long period of time to achieve the goal of curing diseases, which is a lofty goal. However, in terms of practical application
+                and long-term safety, engineering probiotics with short-term colonization function have more advantages. First, compared to the difficult editing and long-term colonization of other probiotics, the potential risk of mutation and antibiotic
+                resistance transmission, <span class="italic">Lactococcus lactis NZ9000</span> colonizes the small intestine for approximately 7 days, ensuring safety while maintaining a relatively long dosing interval. Second, the production cost is lower than that of drugs sustained
+                by physical principles, and the engineered probiotics have unique advantages in the production of protein drugs. Third, lactic acid bacteria can produce extracellular vesicles and have significant advantages over E. coli in drug delivery
+                (Suissa et al., 2022). </p>
+        </div>
+
+        <div class="h" id="three">
+            <h1>Foodborne-stress induced secretion</h1>
+            <p>The <span class="italic">L. lactis strain NZ9000</span> is widely acknowledged as a safe and mature chassis vector, its genomic structure has been fully characterized (Sun et al., 2020), and it has been utilized as an oral agent in microbial therapy (Mohseni et al.,
+                2019). We use engineered gut bacteria in the hope that colonized gut bacteria can produce active substances over a long period of time to achieve the goal of curing diseases, which is a lofty goal. However, in terms of practical application
+                and long-term safety, engineering probiotics with short-term colonization function have more advantages. First, compared to the difficult editing and long-term colonization of other probiotics, the potential risk of mutation and antibiotic
+                resistance transmission, <span class="italic">L. lactis strain NZ9000</span> colonizes the small intestine for approximately 7 days, ensuring safety while maintaining a relatively long dosing interval. Second, the production cost is lower than that of drugs sustained
+                by physical principles, and the engineered probiotics have unique advantages in the production of protein drugs. Third, lactic acid bacteria can produce extracellular vesicles and have significant advantages over E. coli in drug delivery
+                (Suissa et al., 2022). </p>
+
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn3-1new.webp" alt="des-3.1">
+            <h6>Design Ideas for Addressing Postprandial Blood Sugar Response Issues.</h6>
+
+            <h2>Initiative</h2>
+
+            <p>Before we delve into our specific introduction, please allow us to describe the design process that ultimately led us to choose foodborne stress induction. In the latter stages of T2DM, pancreatic islet β cells are severely damaged and insulin
+                should be injected in advance before eating to cope with the upcoming blood glucose peak (figure), If they skip a meal, it may result in hypoglycemia, leading to fatigue and even fainting. Moreover, it is very inconvenient for needle-phobic
+                patients and some people who are on business, and it may even bring discrimination and great psychological pressure. We, the AFMU-China team, hope to use synthetic biology to solve this problem that afflicts more than five million patients
+                with T2DM.</p>
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-2.webp" alt="des-3.2">
+            <h6>Postprandial Blood Sugar Peak.</h6>
+            <p>Of course, the immediate idea is to respond directly to blood sugar, however, after careful literature research, we found that most of the current monitoring of blood glucose is achieved through some materials (cell-free) methods or eukaryotic
+                glucose receptor modification. But the former can not realize the active production, long-term response and release of protein drugs; the latter is difficult to modify and can not be realized in the intestinal environment, will be attacked
+                by immune cells, its safety is more limited, and the cost is higher.</p>
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-3.webp" alt="des-3.3">
+            <h6>Some Current Engineering Designs for Glucose Response.</h6>
+            <p>Therefore, from the perspective of synthetic biology, we have considered the more conceptual use of rhythm (oscillation) switches to achieve our purposes in recent years (Figure: A Design Example of an Oscillating Switch). However, because
+                the current research of oscillating switch still stays in the research of rhythm control, there are no good application examples. There are also the following reasons: (1) Most of them are based on the fact that E. coli chassis cells need
+                multiple plasmids to work together, which will affect the production of target proteins. (2) These are all short-term rhythm designs, using the algebra of bacteria as the rhythm controller, which may be affected by different bacterial
+                growth environmental conditions. (3) Even if the rhythm is adjusted to 6 hours by the pathway design to suit the three meals of humans, it is conceivable that this rhythm will gradually deviate from the eating time of humans over time,
+                just like an ancient clockwork clock. Additional drugs may be needed to control its rhythm, just like winding up a clockwork, thus increasing the complexity of the system and the difficulty of implementation.</p>
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-4new.webp" alt="des-3.4">
+
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-5.webp" alt="des-3.5">
+
+            <h6>A Design Example of an Oscillating Switch. </h6>
+
+            <h3>Each cloud has a silver lining</h3>
+
+            <p>Does it seem that using engineered gut bacteria to control postprandial blood glucose fluctuations is an unattainable challenge? It seems that it can only be done on "after dinner". After eating, many hormones such as gastrin and cholecystokinin
+                will be secreted. At the same time, physical and chemical properties such as pH value of gastrointestinal tract will also change significantly due to gastric acid and cholic acid secretion. We have chosen a "side-stepping" strategy to
+                indirectly respond to postprandial blood glucose spikes by reacting lactic acid bacteria to changes in cholate concentration, which is obtained from <span class="italic">Lactobacillus paracasei NFBC 338</span> in response to environmental stress induced by the
+                promoter <strong>GroESL</strong> (BBa_K5283013). At this point, our food-borne stress-induced secretory expression is beginning to be embryonic.</p>
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-6.webp" alt="des-3.6">
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-7.webp" alt="des-3.7">
+
+            <h6>Changes in postprandial cholate in normal people</h6>
+
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-8new.webp" alt="des-3.8">
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-9new.webp" alt="des-3.9">
+
+            <h6>Design of FGF21 Fusion Protein Expression Plasmid<a href="https://parts.igem.org/Part:BBa_K5283022">(BBa_K5283022)</a>.</h6>
+            <p>Due to the rapid onset of action of FGF21 and the wide range of receptor cells, we designed a cholate-induced secretion of FGF21. However, FGF21 needs to enter the circulatory system to function. The intestinal epithelium, composed of tightly
+                connected intestinal columnar cells, restricts the passage of typical large molecular proteins. Additionally, the reliable, safe, and efficient delivery of proteins in the intestinal tract is challenging due to various factors, such as
+                intestinal proteases(e.g., pancreatic proteases) and pH. By integrating FGF21 and LMWP (low molecular weight protamine) (BBa_K5283017) , which mediates the endocytosis of intestinal epithelial cells, we not only enhance the overall stability
+                of the fusion protein but also ensure a safer and more reliable targeted cellular uptake compared to previous "intestinal penetration" strategies that compromised the integrity of the intestinal mucosal barrier. Regarding the LMWP connection
+                issue, in order not to affect the binding of FGF21 to its receptor, we found by modeling molecular docking that LMWP attachment to the N-terminus of FGF21 did not affect its biological activity (plus linkage to the model), so we constructed
+                LMWP-FGF21 fusion protein. In order to improve the secretion efficiency of lactic acid bacteria, we also designed an enhancer peptide LEISSTCDA (BBa_K5283014) matched with promoter USP45.</p>
+
+            <h2>Validation</h2>
+            <h3>Induced Secretion Experiment of <span class="italic">L. lactis strain NZ9000</span></h3>
+
+            <p>To validate our strategy of food-induced secretion, we first examined the effects of different concentrations of cholate and stimulation times on the secretion of lactic acid bacteria. Where cholic acid is derived from deoxycholic acid, sodium
+                salt and cholic acid were mixed in a mass ratio of 1: 1.</p>
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-11new.webp" alt="des-3.11new">
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-10new.webp" alt="des-3.10new">
+           
+            <p>Finally, based on the results, we selected 100 ng/ml cholic acid to produce a satisfactory amount of FGF21 after 120 min of stimulation, and protein purification and concentration for the next step of functional validation.</p>
+            <h3>Function of FGF-21</h3>
+            <p>Since adipocytes do not have cell lines, we chose mouse derived 3T3-L1 mouse embryonic fibroblast cell line, which can induce differentiation into adipocytes while stable passage, and is currently recognized as a cell line for studying the
+                metabolic pathway of adipocytes. (Purchase from Pricella Life Science&Technology Co.,Ltd.) We added 3-isobutyl-1-methylxanthine (IBMX), dexamethasone and insulin (IBMX, dexamethasone, Dexamethasone, DMEM complete medium containing FBS
+                and insulin was used as lipogenic differentiation induction medium A, and complete medium containing only insulin was used as solution B, and the stimulation of liquid A for two days and liquid B for one day was used as a cycle, with a
+                total of four to five cycles. This type of stimulation is relatively mild and can cause most 3T3-L1 cells to differentiate into fat cells. Adipocytes were then induced to produce insulin resistance by LPS stimulated RAW264.7 to secrete
+                inflammatory cytokines in conditioned medium.</p>
+            <p>Then, the purified FGF21 isolated in the previous step was co-cultured with adipocytes to verify the expression of p-AKT in the signaling pathway of insulin stimulated cell uptake of sugar by WB, and the improvement of FGF21 on insulin resistance
+                of adipocytes was directly verified by changes in the sugar content of the superserum on the medium.</p>
+
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-12.webp" alt="des-3.12">
+             <h6>Downstream Pathways of FGF21 Source: Yang, H,et al.2018.</h6>
+             
+        <div class="h" id="four">     
+            <h1>Constitutive expression of P9</h1>
+            <b>Why choose P9?</b>
+            <p>Induction of FGF21 by food stress alone is far from sufficient, as most patients are also accompanied by disruption of islet beta cells, a decrease in baseline insulin levels in the later stages of the disease, which leads to an increase in
+                daily blood sugar levels, and a further vicious cycle leading to more cells becoming insulin resistant. Therefore, it is very important to control the blood sugar of patients by raising the baseline insulin level. One immediate idea is
+                to secrete endogenous hypoglycemic molecules such as insulin or GLP-1. However, because these proteins are encoded by eukaryotic cells, have some special spatial structures and are easily degraded in the intestinal lumen, we chose protein
+                P9 molecule (BBa_K5283019) from AKK bacteria. Akk bacteria itself is a probiotic obtained from the intestinal isolation of normal people, which has an outstanding role in metabolic regulation (Ghaffari et al., 2023), (Yoon et al., 2021),
+                and its safety can be guaranteed. The P9 molecule binds to the ICAM-2 receptor on the intestinal secretory L cell in the intestinal crypt, thereby efficiently inducing the intestinal gland to gently release GLP-1 into the bloodstream.
+                Due to the limited number of secreted proteins of lactic acid bacteria, and the relatively long time for GLP-1 to play its role after reaching the islets through the blood, we chose to use P32 component promoter (BBa_K5283015) to express
+                P9 molecules on the surface of <span class="italic">L. lactis strain NZ9000</span> via cA anchor protein (BBa_K5283020). In this way, excessive consumption of intracellular resources of lactic acid bacteria can be avoided. After culture in vitro under high nutrient
+                conditions for a period of time, P9 on its surface can reach a relatively high level, and the secretion type expression of FGF21 of lactic acid bacteria will not be affected in the case of cholic acid stimulation in vivo for a short time.</p>
+
+            <p>In order to ensure its binding to fluorescent antibodies in the validation phase, we designed three FLAG tags at the end of the fusion protein.</p>
+
+            <p>The validation of P9 was mainly achieved by fluorescence localization on the FLAG surface and co-culture with NCI-H716 cells (a type of adenocarcinoma cell, but a GLP-1 secreting model cell) by ELISA to determine the GLP-1 concentration of
+                supernatant.
+            </p>
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-13new.webp" alt="des-3.13">
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-14new.webp" alt="des-3.14">
+            <h6>Design of P9 Fusion Protein Expression Plasmid<a href="https://parts.igem.org/Part:BBa_K5283027">(BBa_K5283027)</a>.</h6>
+            <img src="https://static.igem.wiki/teams/5283/design-img/dsgn-3-15.webp" alt="des-3.15">
+            <h6>Overview of experimental design</h6>
+        </div>    
+
+        <div class="h" id="five">    
+            <h1>Next Stage</h1>
+            <p>We co-transformed the two plasms into engineered <span class="italic">L. lactis strain NZ9000</span> to verify their effect, using organochips to construct a small intestinal barrier in validating the intestinal perforation effect of FGF21 (link here to hardware). Our project
+                will also apply for patents and hope to enter the animal testing stage to benefit patients earlier and better.</p>
+            <p>At the same time, in the next step of basic research, we will transform the key components involved in the system. Firstly, the mechanism of GroESL's action is not clarified, and the mechanism of GroESL's response to environmental stress in
+                lactic acid bacteria is expected to be further explored, in order to modify the gene elements on its pathway and design its sensitivity to be further improved. Secondly, the signal peptide segment was modified in order to further improve
+                its secretion efficient (Alias et al., 2022). Several amino acid sites of FGF21 can also be modified by protein structure prediction software to improve its thermal stability (de La Bourdonnaye et al., 2024).</p>
+            <p>In terms of application, we will also further explore the intestinal probiotic delivery system (linked to implementation), hoping to get rid of the limitation of capsules as much as possible, and finally show our products in a more humanized
+                way, such as designing yogurt fermented drinks containing lipid microspheres.
+
+            </p>
+        </div>
+
+            <h4>Reference</h4>
+            <h5>Alias, N. A. R., Song, A. A., Alitheen, N. B., Rahim, R. A., Othman, S. S., & In, L. L. A. (2022). Optimization of Signal Peptide via Site-Directed Mutagenesis for Enhanced Secretion of Heterologous Proteins in <strong><span class="italic">Lactococcus lactis</span></strong>. International
+                journal of molecular sciences, 23(17), 10044. https://doi.org/10.3390/ijms231710044</h5>
+            <h5>de La Bourdonnaye, G., Ghazalova, T., Fojtik, P., Kutalkova, K., Bednar, D., Damborsky, J., Rotrekl, V., Stepankova, V., & Chaloupkova, R. (2024). Computer-aided engineering of stabilized fibroblast growth factor 21. <strong>Computational and structural
+                biotechnology journal</strong>, 23, 942–951. https://doi.org/10.1016/j.csbj.2024.02.001</h5>
+            <h5>Ghaffari, S., Abbasi, A., Somi, M. H., Moaddab, S. Y., Nikniaz, L., Kafil, H. S., & Ebrahimzadeh Leylabadlo, H. (2023). <span class="italic">Akkermansia muciniphila</span>: from its critical role in human health to strategies for promoting its abundance in human gut
+                microbiome. <strong>Critical reviews in food science and nutrition</strong>, 63(25), 7357–7377. https://doi.org/10.1080/10408398.2022.2045894</h5>
+            <h5>Meessen, E. C. E., Sips, F. L. P., Eggink, H. M., Koehorst, M., Romijn, J. A., Groen, A. K., van Riel, N. A. W., & Soeters, M. R. (2020). Model-based data analysis of individual human postprandial plasma bile acid responses indicates a major
+                role for the gallbladder and intestine. <strong>Physiological reports</strong>, 8(5), e14358. https://doi.org/10.14814/phy2.14358</h5>
+            <h5>Mohseni, A. H., Razavilar, V., Keyvani, H., Razavi, M. R., & Khavari-Nejad, R. A. (2019). Oral immunization with recombinant <span class="italic">Lactococcus lactis NZ9000</span> expressing human papillomavirus type 16 E7 antigen and evaluation of its immune effects
+                in female C57BL/6 mice. <strong>Journal of medical virology</strong>, 91(2), 296–307. https://doi.org/10.1002/jmv.25303</h5>
+            <h5>Potvin-Trottier, L., Lord, N. D., Vinnicombe, G., & Paulsson, J. (2016). Synchronous long-term oscillations in a synthetic gene circuit. <strong>Nature</strong>, 538(7626), 514–517. https://doi.org/10.1038/nature19841</h5>
+            <h5>Suissa, R., Oved, R., Jankelowitz, G., Turjeman, S., Koren, O., & Kolodkin-Gal, I. (2022). Molecular genetics for probiotic engineering: dissecting lactic acid bacteria. <strong>Trends in microbiology</strong>, 30(3), 293–306. https://doi.org/10.1016/j.tim.2021.07.007</h5>
+
+            <h5>Sun, W., Zhang, J., & Du, G. (2020). Sheng wu gong cheng xue bao. <strong>Chinese journal of biotechnology</strong>, 36(8), 1629–1639. https://doi.org/10.13345/j.cjb.190552</h5>
+            <h5>Yang, H., Feng, A., Lin, S., Yu, L., Lin, X., Yan, X., Lu, X., & Zhang, C. (2018). Fibroblast growth factor-21 prevents diabetic cardiomyopathy via AMPK-mediated antioxidation and lipid-lowering effects in the heart. <strong>Cell death & disease</strong>,
+                9(2), 227. https://doi.org/10.1038/s41419-018-0307-5</h5>
+
+            <h5>Yoon, H. S., Cho, C. H., Yun, M. S., Jang, S. J., You, H. J., Kim, J. H., Han, D., Cha, K. H., Moon, S. H., Lee, K., Kim, Y. J., Lee, S. J., Nam, T. W., & Ko, G. (2021). <span class="italic">Akkermansia muciniphila</span> secretes a glucagon-like peptide-1-inducing protein
+                that improves glucose homeostasis and ameliorates metabolic disease in mice. <strong>Nature microbiology</strong>, 6(5), 563–573. https://doi.org/10.1038/s41564-021-00880-5</h5>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
